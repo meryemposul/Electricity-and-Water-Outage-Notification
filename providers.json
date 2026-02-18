@@ -1,0 +1,215 @@
+{
+  "providers": [
+    {
+      "id": "izmir-izsu-water",
+      "enabled": true,
+      "kind": "water",
+      "city": "Izmir",
+      "source": "IZSU",
+      "sourceUrl": "https://openapi.izmir.bel.tr",
+      "url": "https://openapi.izmir.bel.tr/api/izsu/arizakaynaklisukesintileri",
+      "listPath": "",
+      "fieldMap": {
+        "district": ["IlceAdi", "Ilce", "ilce", "ilceAdi", "ILCE", "ILCEADI"],
+        "neighborhood": [
+          "Mahalleler",
+          "Mahalle",
+          "MahalleAdi",
+          "mahalle",
+          "mahalleler",
+          "MAHALLE",
+          "MAHALLELER"
+        ],
+        "start": [
+          "KesintiBaslangicTarihi",
+          "BaslangicTarihi",
+          "kesintiBaslangicTarihi",
+          "KesintiTarihi"
+        ],
+        "end": [
+          "KesintiBitisTarihi",
+          "BitisTarihi",
+          "kesintiBitisTarihi",
+          "ArizaGiderilmeTarihi"
+        ],
+        "duration": ["KesintiSuresi", "kesintiSuresi"],
+        "reason": ["Aciklama", "aciklama", "Neden", "neden"],
+        "type": ["Tip", "tip"],
+        "status": ["ArizaDurumu", "arizaDurumu"],
+        "rawId": [
+          "ArizaID",
+          "arizaID",
+          "ArizaId",
+          "KesintiID",
+          "kesintiID",
+          "KesintiId",
+          "Id",
+          "id"
+        ]
+      }
+    },
+    {
+      "id": "izmir-gdz-electric",
+      "enabled": true,
+      "kind": "electric",
+      "city": "Izmir",
+      "source": "GDZ",
+      "sourceUrl": "https://www.gdzelektrik.com.tr/bilgi-merkezi/planli-bakim-ve-iyilestirme-calismalari",
+      "url": "https://www.gdzelektrik.com.tr/outages_data3/IZMIR/-/-/-?page=2",
+      "format": "json",
+      "parser": "gdz-outages",
+      "listPath": "",
+      "fieldMap": {}
+    },
+    {
+      "id": "ankara-aski-water",
+      "enabled": true,
+      "kind": "water",
+      "city": "Ankara",
+      "source": "ASKI",
+      "sourceUrl": "https://www.aski.gov.tr/TR/Kesinti.aspx",
+      "url": "https://www.aski.gov.tr/TR/Kesinti.aspx",
+      "format": "html",
+      "parser": "aski-kesinti",
+      "listPath": "",
+      "fieldMap": {}
+    },
+    {
+      "id": "ankara-baskent-electric",
+      "enabled": false,
+      "kind": "electric",
+      "city": "Ankara",
+      "source": "Baskent EDAS",
+      "sourceUrl": "https://online.baskentedas.com.tr/elektrik-kesintisi-sorgulama",
+      "url": "",
+      "listPath": "",
+      "fieldMap": {},
+      "notes": "Online portal uses reCAPTCHA; no public JSON endpoint found yet."
+    },
+    {
+      "id": "istanbul-iski-water",
+      "enabled": true,
+      "kind": "water",
+      "city": "Istanbul",
+      "source": "ISKI",
+      "sourceUrl": "https://www.iski.istanbul/abone-hizmetleri/ariza-kesinti",
+      "url": "https://iskiapi.iski.istanbul/api/iski/bolgeselAriza/listesi",
+      "format": "json",
+      "parser": "iski-regional",
+      "listPath": "data",
+      "fieldMap": {},
+      "request": {
+        "headers": {
+          "Authorization": "Bearer 53830814b24551a420492dd5c3a110213f21d95af47c659af2b12b5ec48424223df509eac54dcdfc0b1bcfcc7d8ab59aea9d6f18450e47fb2127b55dbac65367cfbdabb6218bedea69dc00f4e9dc7bb2eb13df54e673239968b39e9f42aaf46bccf9092985930e5119f05527bb7d9aeb6e8ba0d24d4ddde22bb8d3b034c2778e"
+        }
+      }
+    },
+    {
+      "id": "istanbul-bedas-electric",
+      "enabled": true,
+      "kind": "electric",
+      "city": "Istanbul",
+      "source": "BEDAS",
+      "sourceUrl": "https://kesinti.bedas.com.tr/",
+      "url": "https://kesintiapi.ckenerji.com.tr/BEDAS/RetrieveOutages",
+      "format": "json",
+      "parser": "ckenerji-outages",
+      "listPath": "",
+      "fieldMap": {}
+    },
+    {
+      "id": "istanbul-ayedas-electric",
+      "enabled": false,
+      "kind": "electric",
+      "city": "Istanbul",
+      "source": "AYEDAS",
+      "sourceUrl": "https://online.ayedas.com.tr/elektrik-kesintisi-sorgulama",
+      "url": "",
+      "listPath": "",
+      "fieldMap": {},
+      "notes": "Online portal uses reCAPTCHA; no public JSON endpoint found yet."
+    },
+    {
+      "id": "bursa-buski-water",
+      "enabled": true,
+      "kind": "water",
+      "city": "Bursa",
+      "source": "BUSKI",
+      "sourceUrl": "https://www.buski.gov.tr/gunluk-su-kesintileri",
+      "url": "https://www.buski.gov.tr/gunluk-su-kesintileri",
+      "format": "html",
+      "parser": "buski-geojson",
+      "listPath": "",
+      "fieldMap": {}
+    },
+    {
+      "id": "bursa-uedas-electric",
+      "enabled": true,
+      "kind": "electric",
+      "city": "Bursa",
+      "source": "UEDAS",
+      "sourceUrl": "https://online.uedas.com.tr/#/AktifElektrikKesintileri",
+      "url": "https://edrimsapi.uedas.com.tr/api/DoimGeneral/KesintiGetirByKesintiTur",
+      "format": "json",
+      "listPath": "SonucIcerik",
+      "fieldMap": {
+        "district": "ilce",
+        "neighborhood": "etkilenenMahaller",
+        "start": "olusmaZamani",
+        "end": "tahminiGiderilmeZamani",
+        "reason": "kesintiNedeni",
+        "type": "kesintiTipi",
+        "status": "kesintiDurum"
+      },
+      "request": {
+        "useCurl": true,
+        "method": "POST",
+        "headers": {
+          "content-type": "application/json"
+        },
+        "body": {
+          "ilKodu": 16,
+          "ilceKodu": -1,
+          "mahalleKodu": -1,
+          "csbmKodu": -1,
+          "aboneno": "",
+          "haritadanMi": 0,
+          "aboneun": -1,
+          "abonesahisun": -1,
+          "kesintiTur": 1
+        }
+      },
+      "notes": "Uses UEDAS public API for active electric outages."
+    },
+    {
+      "id": "antalya-asat-water",
+      "enabled": true,
+      "kind": "water",
+      "city": "Antalya",
+      "source": "ASAT",
+      "sourceUrl": "https://asat.gov.tr",
+      "url": "https://kesinti.asat.gov.tr/dbo_kesintiListe/list",
+      "request": {
+        "useCurl": true
+      },
+      "format": "html",
+      "parser": "asat-kesinti-list",
+      "listPath": "",
+      "fieldMap": {}
+    },
+    {
+      "id": "antalya-aedas-electric",
+      "enabled": true,
+      "kind": "electric",
+      "city": "Antalya",
+      "source": "AEDAS",
+      "sourceUrl": "https://online.aedas.com.tr/elektrik-kesintisi-sorgulama",
+      "url": "https://kesintiapi.ckenerji.com.tr/AEDAS/RetrieveOutages",
+      "format": "json",
+      "parser": "ckenerji-outages",
+      "listPath": "",
+      "fieldMap": {},
+      "notes": "Uses CK Enerji outages API."
+    }
+  ]
+}

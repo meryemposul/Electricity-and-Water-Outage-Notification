@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+	<meta name="description" content="BEDAŞ elektrik dağıtım şirketi tarafından sağlanan İstanbul Avrupa Yakası için güncel elektrik kesinti bilgileri. Planlı kesintiler ve arızalar hakkında detaylı bilgi almak için ziyaret edin.">
+	<meta name="keywords" content="elektrik kesintisi, BEDAŞ, elektrik dağıtım, İstanbul elektrik kesintisi, planlı kesinti, elektrik arıza, kesinti bilgileri, enerji dağıtımı">
+	<meta name="author" content="Message34">
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="node_modules/ol/ol.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./typography.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+            integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.15.0/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/locale/tr.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bedaş Elektrik Kesinti Haritası</title>
+	    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-02P7EYT69S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-02P7EYT69S');
+    </script>
+    <!-- Google Analytics Sonu -->
+	
+  <script type="module" crossorigin src="/assets/index-Be-uzGJr.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div class="w-100 m-0 p-0 bg-dark position-relative" id="map">
+
+      <div id="search-container" class="search-container" style="display:none">
+        <div class="input-group">
+           <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAAAXNSR0IArs4c6QAAA55JREFUSEutlV1oHFUUx/9nutlVW43Y+gGWIn5QaEHxxVKkog8iChIq1gcNoqQsYnYne2fb1J2xcNHspGKbu9mJUWMsaBCsQWofFBGhUAoi+JTogyaYSiu22tRuVWJms3PsnUy2m3Tz0a3nceZ/zu+ec885l7CEpYXzAAFJJt4Cxh0AmgCcADAK4q/LRuLwO/vl70vF0P+oniBl2a3EtAvg+5YJUCbQh+VEZffb+/b9uZj2Mkg6k1MgytQ4jAM4AsIIASc5wHUgPA9ge5SZlp4wArT09roj9UDzIKblvMHMnZFwgkCiqPJH6jkm9+xpTvixToB3R7BJqhhbi8WusYX6KsTM2DuZ8F4oIAzGeMpUSk0tV+9UJvcgEX0B4AYAEzFMbV7oF0Je2iVvaar4+kKvBWjIU3ldjhVbR0duS2DQ0cjf9VTeqXUOIaawexgQAM5UpuN39/fLv1dMiIRpyzHB3AvAX8XxWwsFeX4uRghJC/skgPUAOj3lvnmlAK1PJpNNidXrdDvfCKIOrydfrELaxd7NBirf6w8Vog39PXkNbMhMYQ8x0ErAp0XlPl2FmMJpYfBnAM56yr25oeiRk5mx25nQB2DcU+49VUhK5NoINAjwqKe6770qiLCfYeAQgAuecpsvQSxnBzF/AuAnT7kbrwaSEvazBHx0sZfOecpdW4WkRW4bQMcATK9tjq+RUs40CjIt+zVm7AUw4im3upLoBSmvub7k/wUgRgZtKx7IH28Ukhb2DwA2gXDQ63Hb5rewZX8JxmMEer+o8jsbgbRn7UeNAF9pX2be3lfo1s0UWjgnqcyrDxMFemJnAuaH3ip0f3MlICllfLLk6+Wo7/SP6X/O3j4wMFCeB4kGUpNbLs7mJGPVI33q9dGVglLCfle/O6Ge0eYV3IO1vtUFmc3KdX5QHgX4NgAlAncUVfcHS4GEkDfNwNdL9alI98vpU2N3DQ8PV+pCwmyyuU0I6HMgfAX1qY6TATnzb/zb2n2Wtl65nwNjBxFMAKtrAzLw8ZlTY621oMseLX26MspDBH5iQRZ63fwWdg+wpubfeWI2YdAGZnTNHo4Pnf51/Lk5UN3nN2wG4bwMcJaAOxcp2Y/EPMiVxIDnyQthJTK5AyCyZotwKaNFIXPdZ1rO1oCDjWBaTwZ8Bv0Mg77r2981UQ9uCmeQwbMzEmW0HGSlDVbVSSmNyZKv99fsFia8+L9DdFwpZexcqXyYwY8z48n/ADJWa4J6gJJ6AAAAAElFTkSuQmCC" />
+          <input id="search-input" type="text" class="search-input" placeholder="Adresinizi yazın ya da sesli arama yapın">
+          <svg id="search-clear-button" style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg" height="24px"
+            viewBox="0 -960 960 960" width="24px" fill="#212529">
+            <path
+              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+          </svg>
+          <div class="search-divider"></div>
+          <div id="search-city" class="search-city">
+            <div>
+              İstanbul
+            </div>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAICAYAAADN5B7xAAAAAXNSR0IArs4c6QAAAKFJREFUKFN90D2uQVEQAODPAtDSKzTCCtC/xE9iC3qF2IMo9PZBI/HorOA9O5CQsACNO8mV3NzcmO7MzJc5MyU0ccPD92jgVcITV/RTWMQ6+MU5wAJL/CfJHu450cYBVQwCRMyxwiUpdjOolUw+ooIRth9QhGppcxnjaI6mLIj3LBm9xh/qiOYhdp9v5kHkp9jERfCDfXanIhD1SbrHKX+yN0dhHSmw4LrSAAAAAElFTkSuQmCC" />
+
+          </div>
+          <button id="search-button" class="search-button">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAYCAYAAAD3Va0xAAAAAXNSR0IArs4c6QAAAYZJREFUOE/N1D9IllEUx/GPg0tDEDZGQwgVEREFBk2CIQ1CBA1JEBFUECJR0NRQuGngUEjRYBBEFIpTQbVFERQNumRTi06N/Zmqe+A+8fDwXM14E+/03Oec+72/c+45p8vKaycOZJf3+Fhy71qBcwHHGvYZ3G07UwLtxXjhkitYaNpKoDY11dknuPe3oKvoLyh62aa2pGhdQC8w0YnQOgZ6jpudUPT/QXuwH5/wNkuOohsoPP8zTGbbIfTiQzz/IC7hNW5khxM4WwBNpYvnsu06+iJnAQriLXxPTXkSP7AZd7ClAfuCc/iKTXiEbpyvCvJBgm1Fvfy3hQMOZtg7hJqlvA/g8eSzjDMV6Agu1+S+WWW8HMa17DOW8vmq3iIXMYRfmMZj/GwAw38YpxDffyJo9trpnKc4/zmBY5h9y7DISYS5Pe8f4n51UVvT7sYIdhTCiyl5OylbrNtL3R//9yHqpJqSs7lE5tcyISvfXbXiG/3XmR2wjQfqSf13NMf5ND1CVHbr+g0DvEuodX944wAAAABJRU5ErkJggg==" />
+          </button>
+
+        </div>
+        <ul id="search-list" class="list-group overflow-auto d-none search-list"></ul>
+      </div>
+	
+
+      <div class="button-container">
+        <button id="location-button" type="button" class="location-button btn btn-primary" data-bs-toggle="tooltip"
+          data-bs-placement="left" title="Konuma Git">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAAXNSR0IArs4c6QAAA+hJREFUSEu9lltoHFUYx///2fZFAwparYgVxQvFaqutrVB9UMRaqJKdbSoNO5v0ApoqPuiT+BCsPvigiGKtoinuzCRe2jkTGqSlwRcfIlq0aqWIaNQWioJaxUtJsnv+OrtNmt3MJBsLnodlh/Od73fOdyf+58X/wqMbHAJoZYr3zvf8/ICefz7+xFUkDwGQpHWonB7F0IN/twpuASjC7S8QdgfAO1MVC++L3AVTjOcCzw5s719Nx74O4CYAFsAIgWMiOhLFhPZJzjJAt9U+wQ8l9SD2Ps8CZwPzwRYSCSxH6Hk7seBZDHX+XAO5wbc1kxrvmpri+wYudhZWnxKwA8CYyO2IimEaNB1YCLdS6gPwu4QOxN7w9MMzgJOb+XADqbcAtInsRlQsN0NnAt1wLaEPAJySra7BYHfymoaVCUyk8uXrSOejOlS3Iyol/6dWE1CkGx4BsFwO1mKfN5JqlrpJrYx3baqvNgZ30CK59GEZb3U2sBBsovAOwTetKW7JcrzjBjstWUFU3Jkt478t8AEBG2C89yblGl5INxwGdLdkr0fc9fVcIT7rfsFfRfEwgEEZL58BDMYBHJXxVqYrS3IyeJLgIwD+IBDZ06d6ceDRsQzTfwNgsYzXNhPo9l9J2O8p7bFxaVsq0A0fJ/Rck09es8Z7KE3eyQcDIjarsuBy7N98spZSyY/jBmUBywDcAuA4gO+mK5CwB7Hn0/WPA7yiFlBV/EXiM0C/ypQugut3E+xuBOvqRP7fTP2Ewpc29roJiI4b9qleTVYCOgFwtBEog7j0Et3gRwCXKscbUKleQDojibxMaQkKYRelpkA7CwT5g6Ji4WzQuMFlBE4S8K3xulJNVAhflvRw02UeQ1x6IcOkgYiiKrnF2N/505RJpxzq+r8APCHjrUj1Yce7bU51/BVBSS2dkPQE4tKurGilGxwDsEjGW5QapU7e7xO5VcwtRdT51bmlRflmyvmUwG5rvKTG1lZjpXHDWwl9DNIk9s5O6vBpyFobl3qzXxceBLROtMsRdX2RDqx3gr0ANoroROQlhXjGOlNLs0ub628j+AaFchKZTWnUpK+jvIQV5ygISnZVWsVpoXgfATGmidzSyWDJfGFtww3zhAyA32TZicHigYZbNvfDyc32cD0dDQC4UNT9iEpDzebJbsD1vEoa8EIKL9pK7pnMBpz3L3HI3jMNeFzQdphSkOqOWSOxvX8FHfsqgDXZIwZvBJCMGMkaEW3P9CBp/YVTkpNDlHoA3JVyQUEYloPdiLzBuVKphaltmormMZHVe+CcN4q9m07PBZo9aOY4XR+EUZXx1rcKOifgfCHT5f8BdJi9LEMsnN8AAAAASUVORK5CYII=" />
+        </button>
+        <div class="btn-group dropend">
+          <button type="button" class="location-button btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <i class="bi bi-map" style="color: #0052A3;"></i>
+          </button>
+          <ul class="dropdown-menu">
+            <li style="cursor: pointer;" id="google-street" class="dropdown-item">Google Sokak</li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li style="cursor: pointer;" id="google-hibrit" class="dropdown-item">Google Hibrit</li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li style="cursor: pointer;" id="carto-db-voyager" class="dropdown-item">CartoDB Voyager</li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li style="cursor: pointer;" id="carto-db-light" class="dropdown-item">CartoDB Light</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="outagePanel" class="outage-panel">
+        <div id="outagePanelMaximize" class="w-full d-flex justify-content-center mb-1" style="cursor: pointer;">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAMCAYAAAB8xa1IAAAAAXNSR0IArs4c6QAAAJtJREFUOE+9k90NgzAQg89PLEE36CIsk59JomSZLsIGsAUSRkGiQlHaXkHKPcf+dPYFohxjzBPAC0BPciY5pJRGpVygfWitnUSkByAks2yOMT60ehWIJLz3a2G6hBA6ADv116hA2aTJRhnUrKMjmhyjNq5znO/orhp86+bsibuR1EA1T9wtuQaqecI5V57nX2dbgj59hXYbtepoA+1PkKOxt8uFAAAAAElFTkSuQmCC" />
+        </div>
+        <div class="full-outage-inside">
+          <div class="poppins-bold blue" style='font-size:20px'>
+            Kesintiler
+          </div>
+          <div class="m-2 d-flex flex-row gap-2 align-items-center">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAYAAABG1c6oAAAAAXNSR0IArs4c6QAAAa1JREFUOE/tlT1rVEEUhp93IAs22cCdubvBxoAIFqJFREhhkVaClhZ+FBbGStDKymhhuViIX53JLxC1tNhG0S6NhdZL2LljoxaC3D3uDRE2d1fCbp0p57znOWfe4cyICSvP85dAHmO8VA9775clvZD0OMa4VY9rEjCEkICs0Wj4Xq/3fVTjvb8p6XkFjTGuTwRmWXbSOXcLOAXIzFYkzUn6YGZ/akmLwAlgB/gK/Aa6ZvYkpfRT7Xb7WFmWX4Ajk7qdYu9jURQrCiE8Au4B7waDQUfSAHgtad45d7Esyx816JqkO8AbM+s45xbM7CmwKOm0vPebkq5Kuh5j3KySQwjfgCVgoSiKX6PAPM+vmdmrYcFOjPHunv4tcMHM1v4HbA+rz6eUKo/GVqvVOtfv9z/9C4QQ9gG3JF2pKprZ+yk8G5VuDC07u9vh3vGOzwjal2ZmGxWwC5wHtoHejODlahCAyxM9nBZa93Dslg+BBzpw6KF/JmndzO6nlB4eaNi4YC6E8Bk4Y2aryrJs1Tk36wyP4neazebS7hcQQrgxfKkfAEdn6LBK6Uq6HWPc/gv7A+GfDXrgsAAAAABJRU5ErkJggg==" />
+            <div id="outage-date" class="outage-date"> </div>
+          </div>
+          <div class="d-flex gap-2 mb-3">
+              <div id="summary-box-planned" class="summary-box planned">
+                  <div id="planned-outage-number" class="montserrat blue summary-box-number"></div>
+                  <div class="d-flex flex-column mb-2">
+                      <div class="montserrat blue summary-box-text">Bildirimli</div>
+                      <div class="montserrat blue summary-box-text">Kesinti</div>
+                  </div>
+                  <!-- ICON -->
+                  <div class="icon-container" style="display: none;"><i class="fas fa-check-circle icon"></i></div>
+              </div>
+              <div id="summary-box-reported" class="summary-box reported">
+                  <div id="unplanned-outage-number" class="montserrat blue summary-box-number"></div>
+                  <div class="d-flex flex-column mb-2">
+                      <div class="montserrat blue summary-box-text">Anlık</div>
+                      <div class="montserrat blue summary-box-text">Kesinti</div>
+                  </div>
+                  <!-- ICON -->
+                  <div class="icon-container" style="display: none;"><i class="fas fa-check-circle icon"></i></div>
+              </div>
+          </div>
+          <div id="local-outages-header" class="outage-panel-header d-none">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAlCAYAAAAuqZsAAAAAAXNSR0IArs4c6QAAAwpJREFUWEftmD1oFFEQx/+za8AP8COQ9/awMGAjihEUCRGJ5wdRUQuxjZVYBcVGNF2CIJhOtLBRhMRGUtgICgaNaCWpRASJkkQ439wFOQjxUrg75h17YRMu2bu9JGdxU+3uvP/w23mzs+89QsSUUgccx9kRfbYa1yIyxcw/qolFdrDW+hSAYQDbqhFXOfaz67rnM5nMVCU6Ukq1EdEYgA2VCGocMwlgHzPPxsUhrfUbACcBFESk23Gc33Giav0ichTAHasjolvGmIG4GBbsD4BNAO4z8404QVK/1voLgL0AXjDzxbg4FkzCN+k3xvTFCZL6lVKjRNQJYJSZ03FxGmCNjMXVyFK/1vodgGMAJonoadQvIn8BjPu+/3J6enqmWPPrVfwRsJXeaVxEzmSz2e/rBhapsbhkf2XmtnUDi2SsbLvQWvcCuGupbdb+G7DW1taNhUKhEKazd93AKmkX0XpvgDUyFvfNl2mwGQApAM+YubucvuIa01q3E9HZaiGWjheR3fOdvQRzhZmfJAZTSl0ioucAnFrBIvpxZt4DwE8EppTqIqLXqwj0U0RGRKQ3l8uZ5eKuOJWe5x0WEfvD3QxglojOhfd2WZw2xoyuIvCiUGXBRKTPcZxhEfkAYHuYbpu5QETehqvc48YYC70mVhYMwGMAFwCo8H91OZvNDnmel6432EIWiOi2MeaefVBPMFvkXZG5ecDM10v3qVSqMwiCYl0R0QljTHFa18IWTWVzc/PWpqamR2HzG2JmO6UL1tLS4jmO8ysEq2hPmBR6EVglQZRSY0R0MKy990RU3PLVYDNEdM0YMxGNkQTsCBF9rAGknDQnIh12GV1yVg1mhalUapfv+z2O4+wXEbtzT2QiQuHG1+ongiDoKDXdRGCJKJYReZ7XIyIPw7r9Njc3157P5/N1B7NASqkBIroZsn9yXTft+37xFGg+pf3F87F6mdZ6MLLqsKdO9pyu/mAWwvO8VyJyOpocEblZ14xZGK31FgAjANpDuJzruofqDhZpFVeJaGcQBIO2hfwDJqPBQOSfxU4AAAAASUVORK5CYII=" />
+            <div class="panel-header-lines">
+              <div class="panel-header-first-line">
+                Kesinti
+              </div>
+              <div class="panel-header-second-line">
+                Bildirimleriniz
+              </div>
+            </div>
+          </div>
+          <div class="d-none" id="local-outage-panels"> </div>
+          <div class="outage-panel-header">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAoCAYAAACb3CikAAAAAXNSR0IArs4c6QAABRBJREFUWEfNlwfMZlMQhp9ltRBB9CXaxmrRCbHKIrroRFYNsnoLVu9iCdESluiid6Imeq+rRO+JLrog+nn+zJHjuN+9327+WJP8yf/dM2fue8/MvPOeIfxPbMgk4JgH2BzYAFgQmBv4E/gYeAe4HbgZ+HRiYk8MkJHAIcBGQNe+P4AbgZOBCf0A6gpoDH1OBw6oAn4CPAO8C0wBLACsBMxW+R0FnNgFpguI6xcBOxeBLgVOA17pEXwp4HBg62L9PGDPNjBdQI5OJ3JcBPAENgOe6vq6WF8LuA6YJX6PBU7ttbcNyLrpqO+Oja8Dq6ev+rxPENnNwn4AGB4FbYxHmmL0AjIN8B4wF/A1sCzwfkOAhVLq5i3ANnXKwlFLMwJvA4sAv9exegE5oiiw7YArq40GvxZYunj+K3AW4N5fKv8xwPh4ti9wTr9A3orjfBlYstq0KPAwMGuPNL2UTmBD4MNifargGE/PTluxHyDmUyDagcAZxaYZghf00a4GLon8bwrsFc9N44jqZI5PKbGVJb+ZEx18W4JpSs2OgC2q+ULZMtv2iU0vjx/HJP4weGnjALtD2zVaP6+vkNj46fgh6Fu7gIg6v2DqlHNzn826kB8sSjuiLjr9vwKmj48p+Wd24LMItF9q67O7gJyZOkVHARi4NFtxDeAxQMpvsmfTvFkOuA9Yu3CQfTNwqV/S+9uaUlOS2ExVLu+IYfcl4Bc6U0qzKP1qa0Ay26ZYnKMYhAcHO7cC2S1N1AvCY/GUileLYHsXrXcKcGgFROb0JdouwMXF+vLRMT4aDVzVdSKy34PhtANwRbFhuiAlR792S3SOjOvX7x7PLfDFqq7ZI53iubEuqOe6gAwFfkgjXHa9IQ23raqvXjUA5BlS14kzyTp6s1pwXDg2bFtTZxu3psbFe4B1gO8TI86ZdMiPVdBhwAlJAnhiU8baFwHcIZm7I2/zxT6zhuraGfDpRfHm98KI4vh2jDeZp2YKvqv4pva1Q06Kh1sktr6pdmgbenaGfKDwydOzB57Wx6b6o+gyT8X6qrutVfJJOPvEK7ZNU/OaSUEBlJ12bKFv/hGuTY/IEx8A04YkcHaULNsPLke/c8caUU7MH2n8194uhWZBHhm7Dgrt2g+A7CPXKLi1xvGfHbuAOG3fiLz+lLpiiaiZfsA45JSVvuO1dMVQy/Y80S4gvnBL4Pp480PBEV1A7CZ1iQJKWyXRweNtm0og6o5lKmcvS14l7kxft36stbVz3u5Qy/R/fjCuLSw3leaJDciGDETEj/ZArI/a1euDRWeKVGkWcpM5edUdTlsL1XklkX3Tw189PCEDKQVP6a+2tMi0jZOIvi3+F5QyoA6uFHwyauo3wDp5IfZIkBJlbQPUkIGotuxxzRliqzWZaVI+aubcmZILUMmgHs0ysq1LPGHvytphiSLGZSDqzp1SXn8GnLC9zLlyf/pbLRwui33+vCudxnrx3BHvqG8zT8x4So4xGUhWXi9WV4SmQJ6YNeCdRnOvpLdy/H4+usSPajMvbZLkvU7lDMTLlKynoFXYdpnH/0TDlcJZYrE6W7osywLlwgiB+OeFyOGkXq1v/b0CClwFNioclA4q9/I+0wbGia6QUscOFcR8xXVy/7itdX3NYKzLH14/tGECKaXhJkWLDsbL2mJ4LfF6oo0UiCrL6tfs9X7yOxggzYSdqo0WiNPVKTs5baxA1ozL0OQCYpuP6mf6/icA/wKqI/iG8Pv+twAAAABJRU5ErkJggg==" />
+            <div class="panel-header-lines">
+              <div class="panel-header-first-line">
+                Hizmet Kesintisi Olan
+              </div>
+              <div class="panel-header-second-line">
+                İlçeler
+              </div>
+            </div>
+          </div>
+          <div id="feature-panels"></div>
+        </div>
+      </div>
+
+      <div id="outageContainer" class="outage-container">
+        <button id="outage-button" type="button" class="outage-button">
+          
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAi1JREFUSEvtljGMDFEYx3//cYdcopAQuTlXiYQWoSAS0SIuKhS6czMXudARBcVpFC7CzkQnEQqNEKVC0Gi0SFT23gmlhCCZT9662zybvZ3ZXXvFxWsmu/O97/e+/7z/+55YHHFq41HBtqXfvT6LiA+upo9l8xVP2ghD3MOYKAuu+t7g4Zr1nKnf0Pfl5ihO7BYwDXwSvKuafLk4Ezswtgjm5jOd7wT+AmyKjH31XK/7BcdTth/xEqPuco13Apt/6TKpX2hzvyRWmtNLXRrU7YKq5Fyd4Mg4FKoVWm2gFbf7REtWGyhY8DyEh1YbKLjVKaHVVhTsq1/a8f/B3Z4VbeJNcUIBmMsUtQaUSr11yvYCI92upIjYg3Ed8dbVtLMr8Fhi1wwudgv9yzpwdiHTncrg0dRmZMwBX4ENfmKrH8sW5A8Jl+l2u7i2UsepncS4D/xEHMZ4MajO1bSTjKMmHv0pkAmX6XGVLlNWfSepfwFDgH8OC5L5THlo9kH0asWp+fvW6cbKxFVX05WgoXtbyGVEoEbf7nc0v/HuSRt2EUcEn12uV2HiOLH3wHaJCyp40wP0W+t1qgnulCxOzF8C/WWw52HG7EKuy4GKDeVK71lxYucEJ3ohG+xqWNKYcbluhvumFNwLsFldagcwngFrEadcTQ8qSd0PNJD2GDRsWsg4buJJJan/CTy1FMOfZD+Add66A5U6XPRYYrMGlxb/u7tiYA8cnbaDgo1uM09/A8hRM2r1Ls/XAAAAAElFTkSuQmCC" id="outageButtonSvg"/>
+        
+          <div style="margin-right: 6px;">Kesinti İhbar</div>
+        </button>
+      </div>
+
+      <div id="bedasPanel" class="bedas-panel">
+        <div class="d-flex justify-content-between align-items-center w-full">
+		<a href="https://www.bedas.com.tr/" target="_blanck">
+          <img src="logo.svg" alt="logo">
+          </a>
+            <img src="data:image/png;base64,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" id="bedasPanelCloseButton"/>
+         
+        </div>
+        <div class="bedas-panel-body">
+            <div style="margin-bottom: 40px;" class="bedas-panel-section">
+                <a href="https://www.bedas.com.tr/" class="bedas-panel-link">Ana Sayfa</a>
+                <div id="planned-outage-filter" class="bedas-panel-link">Planlanan Bakımlar</div>
+                <div id="unplanned-outage-filter" class="bedas-panel-link">Anlık Kesintiler</div>
+                <a href="https://www.bedas.com.tr/elektrik-kesintisi-sorgulama?il=%C4%B0STANBUL&ilce=ARNAVUTK%C3%96Y" class="bedas-panel-link">Haftalık Planlı Bakımlar</a>
+                <!-- <a href="https://www.bedas.com.tr/elektrik-kesintisi" class="bedas-panel-link">Elektrik Kesintisi</a> -->
+                <a href="https://www.bedas.com.tr/formlar/1/bilgi-edinme-basvuru" class="bedas-panel-link">Başvuru Formları</a>
+
+                <a href="https://www.bedas.com.tr/tum-duyurular" class="bedas-panel-link">Duyurular</a>
+                <!-- <a href="https://www.bedas.com.tr/cerez-aydinlatma-metni" class="bedas-panel-link">İzinler</a> -->
+            </div>
+          <div class="bedas-panel-section">
+            <div style="cursor: default;color:#707070;font-size: 25px;" class="bedas-panel-link">İletişim </div>
+            <div style="cursor: default" class="d-flex gap-2">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAA2xJREFUSEvlll1oHFUUx//nums20KAWSv0orYgitYit2+zcO5NQg7QSRQTxoQ9KLaU+tYIBEUtVKCoiSFtoH/rlky++SJX6tuK0wt47iWNhjSCiUASxQtVYaCI7mXvkprt22cx+JJv64jzunPP/ne8dQo+P7/sbrMUzRDwKYCMz1jtXIvzMjO+YcUEInNVa/9KLJHUzUkqtthbvEmEPgFwX+4QIJ621B6IoutrJtiPY87x1gCgT4cG6yCRAnzDT+cHB/Pfut1qtttFaOwbQcwC21O2mkyS3I46/+rUdvC3YZcqMi4ArKf0gBPZWKpULnbJQSj3BjDMA7gFwydp06+Tk5O9ZPu3AQkpZBmgMQDVJao/HcXylW1vc++Hh4TtzuVyZGZsAfGGM3gHAtvpmgqWUEwB9ALjBsaUoin7rBdqw8TxvLZGIAGwgwn6t9bGu4HqJLwEYAni7Maa8FOgNePAkkf0cwJ/M9t7WYVuUseepl4hwAsA3xujicqB1H5JSTQN4iJleiKLKR81ai8BKqXPMeIoZ+6JIH+8DDKXUq8x4H6CPjans7Ab+iRn3EeEBrfWP/YB9399sLbvNmDZGP9wRLKVK3KEoFAbyYRjO9wMeGRm5Y34+/QPAX8bo27uB2RkYo7tetV6CklJl6i0Sb2fYCyTLpiPY84IxIj4EsJviwSaBi8boR5cDVUpN149Iw30OoJiID2qtz5NSqsQMt+yZz3JL3sg0Q5SFoMDtWghgG8CnkiT/VuOw91vyVv9icfSufD55B6DdAMoO7P6+hgqFgcEwDP9uRLjSYKdbLBZvy+dvnQFw1YEzp+5mgB28ofv/BC/0eHb22qpqtXrtZvY4CIKhNLWOt9DjLwE8BtDpNE3emJqautzci37XqeEfBMHdaZq+/e9U+76vrOXKf7nHAKuFk9l0ubYCKDQFUTVGP7JSl4sIXzPzm8aYMOtWfwbgaWa8HkX6vez7Kw8AdAhACuBsktR2x3E8u5QAF4FLpWBUCOuumftY36u1/rBZUEr/NYBbAzpsjJ7oC3x9sOSLAJ0EkG8nxmw3CSHWMCME6IoxlTV9g6/33VtHdMt+gJ8FcH+rqBBUAjBnLX+7ouB20UspjwL0cvN7ZhyJIv3KimTcTmR8fHxgZmZmghnPu0ow41MhsEtrPbcU8D9kwrTo93rLswAAAABJRU5ErkJggg==" />
+              <div style="cursor: default" class="bedas-panel-link bold">ALO <a href="tel:186"
+                  style="color: #383839;">186</a> BEDAŞ </div>
+            </div>
+            <div class="d-flex gap-2">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAlJJREFUSEvtVz2IE1EQ/uaRWKjgXWMhNoqdPwcWyXtJkBRno4U/hWB1jRb+VIqCFnqNP4dnd3CijZVYWIlgo4UE8mYr5bzGQtDisLDwFIUTsxkv2UQ2cXffPjm1yZa7M98337yZN7OEnI8x5ogIpgHs6bksEuGStfZJTogBM8rjpHVlBpCLSbYiuBEE9nIenLiNk7hUqhxUSnqq6FoY/pgrFAobReQYQFcBrCPCpLX2uQ+5k1hrwwDKRJi11l6Ig2tdOQnIXQDPmO3+tSb+CmADEbZaa5fi4PV6fWxl5fsnAJ+Z7dhaE38DsL5YLGxuNBof4+DVanVLGLY7wSQSG2MWRbAz5rMkgrkgsDedqS6XzQsi7APkNDPPD6ZazwJ0fvUonjLbA8OKtTaSnAU55yQ2xhwXwQMAX0TorFLyqN1uF5VS10VwJgKWQ8z8OI2Y2XZ5SqXahFLhKwDvncQdB60r9wA5kXKGd5jtqaRvfcV94ggrykIu4shBTxHRFRFs72oUvFl1nw6C5sO0osokrtVq461WeAvAUQDjCSAvme3e/vsUsNcAdqUFkKhYa3MfwFRGKyww24ks4oTqHYBLI14GsAmQbcz8ztWLSYr/KNU+QPHiiKsYETsKMWqnUapHVT2cgd5lEcYvlX/STq6jGByb0UBIu7l+++gDnmWbOSR828knqP9O3A9WBMtE6O5m3heIj+KsqfVXiYeDjK0+XcXdsagU7Wg2m299FPnaGmN2i2CBCB86xK5FwBffad/57aFo9WndBuhwyurjBPIw+LVX/wSPvYAGMTrWXwAAAABJRU5ErkJggg==" />
+              <a href="https://www.bedas.com.tr/iletisim#tab-12" class="bedas-panel-link bold">İşletme Müdürlükleri</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="bedas-panel-button" class="bedas-panel-button">
+	  <a href="https://www.bedas.com.tr/" target="_blanck">
+        <img src="logo.svg" alt="logo">
+		</a>
+        <div class="d-flex gap-2 align-items-center">
+          <div id="bedasPanelSearchButton" class="bedas-container-search" style="cursor: pointer;">
+            
+
+          </div>
+          <div class="search-divider opacity-25" style="height: 48px;color: #BFBFBF;"></div>
+          <div id="bedasPanelButton" style="cursor: pointer;">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAnCAYAAACBvSFyAAAAAXNSR0IArs4c6QAAAx1JREFUWEftl09oFGcYxp/nm9nEkKTxTw6pLZKU6qFaBD2IUkpaPJj2EjAebKG0nkzcgZmkmN2NKXuIuwXt7sRJSsmppRTFaCmlLaXFQqEQURSCN3tp/YOakCCJySbZne+1uxIPIUim08Yc9jsNw/O+34/vfead9yMA2HaixTe4vvi8mkuJnu7PpH9g1E60gHKQYN1qApT2Ih5S+BMtJ7afVIdFUANALQeiyPy/BdQikWVjKUJRUz71dywKonasWRSLEKu6qIzZgdN9v5UgnvcqQyxWoHwSa+skuru762YWIh8q6KaQX0lEibrkun3fBs3Djs5P3lJ+vp2Kof2hRcbH7s51DQ9nc0FAaHXFX4OPDkCF+ndQCX3I1cFMuh+ABIIoijuc2KvgwnyQwKVaxcrq+trKW8lkcjZontAlCLrhcvoyxNrqE/9FTcPmeOoJx8lUhU0WNL5QGK/xvPQ4ox+faKIvcYH4AEL1imAQMqOgVEHyp2jZPe9D6XchXH4MC5Y5mFooULzE9lhsgzFndhF+lYD1wbKEUCuZgsasCbrlPlHuE0udVPZE2RNr1xPHnN7tCv4BL5v6bJHStmONPvmel02nQvTFFYU+uZV39hyiyHkh2wYyJy8W31lO4nsAb3vZVOm2HnV6Xze03pDLjY8MDQ3lrc7unaZwOi/mFoE/P+imL1tWslaMwq4Bt+93y7IqxKjb+2i9efnLZHLuWTQlCMuOt4H85p+Zd8xEblteqppJFCHmixBWZ2IAgh2AjAJ8B4WK3TAXiveLPQCuAXhTgC6SIxAZ2VRXEZmYmG2Aad42RDe57qd/rRTiNESuALgtZKsiL4jIsapI4cVc3pwi8AWIByI4CuI4BB9A5Ibnph3LTnwFkiA+X4SYnMxtFsP4OzhEofAGTPMmgF9ElEvqH+/f+fOFhpe3TkJwVqDOEf5GAxzxia9J/HEmk0qWTkpLvRKmtMKoFtmngJdADgeG8LKpxqgdb1VaX9cq8gqpf/ayqXWlmYM6A7AagmHPTR2xnMSvSyE8N33YcuIuwI8A3AOwbcUQK7Lw/yh6DGIdPzL3SCqCAAAAAElFTkSuQmCC" />
+          </div>
+        </div>
+
+      </div>
+
+      <div class="overlay-container" id="overlay">
+        <div id="overlay-close-button" class="overlay-close-button">
+          <svg id="search-clear-button" style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg" height="24px"
+            viewBox="0 -960 960 960" width="24px" fill="#212529">
+            <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z">
+            </path>
+          </svg>
+        </div>
+        <div id="overlay-header" class="overlay-header">
+            <div id="overlay-district" class="overlay-district"></div>
+            <div class="overlay-date">
+                <!-- BAŞLANGIÇ TARİH -->
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAAXNSR0IArs4c6QAAAMdJREFUKFM1z7Euw1EUB+DvRLdOBoPBIPEATUtCsIpFamGsiUXEC4ipD9CpScNmES+gVotOlUgkBqtBUl0sJtf/co3nnO93ck5AYg7n2MEsHnEcPOd5JBbwgAF6qFeojTPsBaOMrjANThNH2Ag6iS30g6WM3tEM3hKHBR2UMyZoZfSJxWCSaOIW68Fr4gW7Gd3jOuiX9DLGaOCuunU+o23cYD8YFriag7gMulGam/4e+MAXVnBR1SfB9y8qcKZav4YanoLp/+wH5z40UnQecW0AAAAASUVORK5CYII=" />
+
+                Başlangıç Saati:<span id="overlay-date-first"> </span>
+            </div>
+
+            <!-- BİTİŞ TARİH -->
+            <div class="overlay-date">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAAXNSR0IArs4c6QAAANpJREFUKFMt0DErxHEYwPHPj1PKZDAYDMoL0KEIqyxiYWRikbyB6+6hy2xSYrPo3gBWCxOlrgxWgzoWA0l37vd33+15nu/z9DxPkjky4kcVKxjGoz67qpq5nNSN+XUnOTXo2JchyaqOCtaF+yRc4EPYF3awIGyqWZKcCBNZelNSVvHqwLZOIW0Va9S0DJjK0ifGhZZQxhXmhRfhGWtZusWl6I7OhGk8YBI3GM3SMhrYEK574mzRyLlQT0Xy0KJ2ccA7vjGDs268J7T/pUxDv6a57lNKeBLdi3v8ATqtOdncJ5UHAAAAAElFTkSuQmCC" />
+
+                Bitiş Saati:<span id="overlay-date-last"> </span>
+            </div>
+
+            <div class="overlay-conc">
+                <span></span><span id="overlay-conc"></span>
+            </div>
+        </div>
+        <div id="overlay-body" class="overlay-body">
+          <div class="header">Etkilenen Mahalleler</div>
+          <div id="chip-container" class="chip-container">
+
+          </div>
+        </div>
+        <div id="overlay-footer" class="overlay-footer">
+          <div class="header">Açıklama</div>
+          <div id="footer-desc" class="footer-desc"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="modal fade" id="outage-modal" data-bs-target="#outage-modal" tabindex="-1">
+    <div id="outage-dialog"
+      class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable justify-content-center">
+    </div>
+  </div>
+
+  <div id="loading-screen" class="loading-screen d-none">
+      <div class="loading-content">
+          <div class="poppins-bold blue" style="font-size:20px; color: #ffffff;">
+              Lütfen Bekleyiniz
+          </div>
+
+          <img src="loading.svg" alt="logo" style="width: 35%; height: 35%;">
+          <div style="font-size:16px; color: #ffffff;">Yükleniyor</div>
+      </div>
+  </div>
+
+</body>
+
+
+</html>

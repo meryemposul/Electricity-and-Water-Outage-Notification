@@ -1,0 +1,2045 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <base href="https://www.gdzelektrik.com.tr" />
+        <meta charset="UTF-8" />
+        <title>Planlı Bakım ve İyileştirme Çalışmaları |  Gdz  Elektrik</title>
+        <link rel="icon" type="image/x-icon" href="https://www.gdzelektrik.com.tr/assets/img/favicon.ico" />
+        <meta id="token" name="csrf-token" content="VhZAiqjvPng0F7qgDFGIIyiuh2SHZgsBOEXguuKp" />
+        <meta id="firmSelector" name="firm" content="GDZ" />
+        <meta charset="UTF-8" />
+        <link rel="canonical" href="https://www.gdzelektrik.com.tr/bilgi-merkezi/planli-bakim-ve-iyilestirme-calismalari" />
+                  <link rel="alternate" hreflang="en" href="https://www.gdzelektrik.com.tr/en/information-center/planli-bakim-ve-iyilestirme-calismalari" />
+                <link rel="alternate" hreflang="tr" href="https://www.gdzelektrik.com.tr/bilgi-merkezi/planli-bakim-ve-iyilestirme-calismalari" />
+                 <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta property="og:title" content="" />
+        <meta property="og:url" content="https://www.gdzelektrik.com.tr/bilgi-merkezi/planli-bakim-ve-iyilestirme-calismalari" />
+        <meta property="og:image" content="" />
+        <meta content="width=device-width,initial-scale=1" name="viewport" />
+        <link rel="preload" href="https://www.gdzelektrik.com.tr/assets/fonts/Calibri.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+        <link rel="preload" href="https://www.gdzelektrik.com.tr/assets/fonts/Calibri-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://www.gdzelektrik.com.tr/assets/css/font.css" />
+        <link href="https://www.gdzelektrik.com.tr/assets/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="https://www.gdzelektrik.com.tr/assets/css/slick.css" />
+        <link rel="stylesheet" type="text/css" href="https://www.gdzelektrik.com.tr/assets/css/slick-theme.css" />
+        <link rel="stylesheet" href="https://www.gdzelektrik.com.tr/assets/css/selectric.css" />
+        <link rel="stylesheet" href="https://www.gdzelektrik.com.tr/assets/css/main.min.css?v=15" />
+        <link rel="stylesheet" href="https://www.gdzelektrik.com.tr/assets/css/satisFaction.css?v=15" />
+        <link rel="stylesheet" href="https://www.gdzelektrik.com.tr/assets/css/mapView.css?v=16" />
+        <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet" />
+        <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+                <link rel="stylesheet" href="https://www.gdzelektrik.com.tr/assets/css/additional.css?v=695ffdb7ba2a3" />
+
+        <!-- Google tag (gtag.js) -->
+        <script defer src="https://www.googletagmanager.com/gtag/js?id=G-SGCBEGMXNG"></script>
+        <script defer>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "G-SGCBEGMXNG");
+        </script>
+        <script src="https://www.gdzelektrik.com.tr/assets/js/jquery.min.js"></script>
+        <script src="https://www.gdzelektrik.com.tr/assets/js/customScroll.js?v=1.0.0"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+        <script src="https://api-maps.yandex.com/2.1/?apikey=f5268b22-a7a0-4303-bf69-2dd5bf43af89&lang=tr_TR" type="text/javascript"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.15.10/sweetalert2.all.min.js"
+            integrity="sha512-KWZQo2EiUMmEMrjJUUZoWP8k/mL57L5PPjQF23Vv77jGidQK8WPsX/RoQ7uI0cnjDDCU8ZXa1NG24HkLOqI9sg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+    </head>
+        <style>
+        .custom-icon {
+            width: 30px;
+            height: 30px;
+            background-color: #ea652e; /* İkon rengi */
+            border-radius: 50%; /* Yuvarlak yapmak için */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+       .mobileSection .map-view-filter {
+            display: block !important;
+        } 
+        .left-col-toggle .icon-close {
+            display: none;
+        }
+
+        .left-col-toggle.active .icon-search {
+            display: none;
+        }
+        .mobileSection {
+            display: none;
+        }
+
+        .mobileSection.d-block {
+            display: block;
+        }
+
+        .left-col-toggle.active .icon-close {
+            display: inline-block;
+        }
+        .icon-search {
+            animation: bounceAnimation 2s ease-in-out infinite;
+            cursor: pointer;
+        }
+
+        /* Animasyonun tanımlanması */
+        @keyframes  bounceAnimation {
+            0% {
+                transform: scale(1); /* Başlangıç boyutu */
+            }
+            50% {
+                transform: scale(1.1); /* Biraz büyüme */
+            }
+            100% {
+                transform: scale(1); /* Başlangıç boyutuna dönüş */
+            }
+        }
+
+        @media (min-width: 992px) {
+            .mobileSection {
+                display: none !important;
+            }
+            .map-view-map .map-main {
+                height: 100vh !important; 
+            }
+            .map-view-col.left-col .map-view-logo {
+                width: 63px !important;
+            }
+        }
+        @media (max-width: 991px) {
+            .map-view-map .map-main {
+                overflow: hidden;
+                height: 100vh; 
+            }
+            .desktopFilter {
+                display: none !important;
+            }
+            .map-view-card-filter button.active {
+                background-color: #f7f7f7;
+            }
+            .map-view-card-filter button {
+                background-color: #e6e6e6;
+            }
+        }
+
+        .mobileSection {
+            width: 100%;
+            background: #f7f7f7;
+        }
+        .map-view-col.left-col.show .map-view-breadcrumb,
+        .map-view-col.left-col.show .map-view-head,
+        .map-view-col.left-col.show .mobileSection {
+            display: block;
+        }
+        @media (max-width: 992px) {
+            .map-view-col.left-col .map-view-logo {
+                width: 100% !important;
+                max-width: 100px;
+            }
+        }
+    </style>
+    <body class="">
+        <div class="main-map-view">
+            <div class="map-view-col left-col">
+                <!-- show -->
+                <div class="left-col-main">
+                    <div class="map-view-logo">
+                        <a href="/">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="168.782" viewBox="0 0 170.782 72">
+                                <g transform="translate(0 0)">
+                                    <g transform="translate(0 0)">
+                                        <path
+                                            d="M75.483,11.829H67.537a.991.991,0,0,0-.988.988V29.761a1,1,0,0,1-1.5.869,16.806,16.806,0,0,0-8.957-2.387c-10.08,0-18.173,8.4-18.173,19.319a19.853,19.853,0,0,0,4.733,12.981,18.613,18.613,0,0,0,13.975,6.262,15.511,15.511,0,0,0,8.741-2.562,1,1,0,0,1,1.564.81.99.99,0,0,0,.988.988h7.566a.99.99,0,0,0,.988-.988V12.817a.991.991,0,0,0-.991-.988M57.991,58.522A10.689,10.689,0,1,1,68.68,47.833,10.69,10.69,0,0,1,57.991,58.522"
+                                            transform="translate(16.632 5.189)"
+                                            fill="#ff671d"
+                                        />
+                                        <path
+                                            d="M98.688,52.405H84.4a1.689,1.689,0,0,1-1.321-2.739l15.4-19.326a1.691,1.691,0,0,0,.368-1.05V25.457a1.687,1.687,0,0,0-1.686-1.686H70.755a1.688,1.688,0,0,0-1.687,1.686v5.025a1.689,1.689,0,0,0,1.687,1.686h11.03A1.684,1.684,0,0,1,83.107,34.9L67.9,54.237a1.661,1.661,0,0,0-.364,1.04v3.843a1.688,1.688,0,0,0,1.686,1.688H98.688a1.689,1.689,0,0,0,1.686-1.687V54.094a1.687,1.687,0,0,0-1.686-1.689"
+                                            transform="translate(29.624 10.427)"
+                                            fill="#ff671d"
+                                        />
+                                        <path
+                                            d="M47.725,33.62H29.781a3.055,3.055,0,0,0-3.054,3.056V39.73a3.057,3.057,0,0,0,3.054,3.056h7.636c1.687,0,3.056.574,3.056,2.26v6.926a3.006,3.006,0,0,1-1.306,2.506,18.716,18.716,0,0,1-10.61,3.166c-13.375,0-22.769-13.375-15.986-28.111a12.583,12.583,0,0,1,5.483-5.847c8.368-4.463,15.858-2.863,21.021,1.055a3.031,3.031,0,0,0,4.014-.371L45.509,21.8a3.033,3.033,0,0,0-.338-4.507,28.158,28.158,0,0,0-17-5.467C11.526,11.829,0,23.97,0,39.32S11.684,67.1,28.326,66.806c9.023-.16,14.691-3.251,16.14-4.235a27.819,27.819,0,0,0,3.917-3.092,10.924,10.924,0,0,0,2.394-4.673V36.677a3.054,3.054,0,0,0-3.053-3.057"
+                                            transform="translate(0 5.189)"
+                                            fill="#ff671d"
+                                        />
+                                        <path
+                                            d="M80.1,20.526,86.2,22.5,92.31,24.47a1.2,1.2,0,0,0,1.538-1.393l-1.341-6.271-1.341-6.272a1.2,1.2,0,0,0-1.98-.64l-4.76,4.3-4.76,4.3a1.2,1.2,0,0,0,.433,2.033"
+                                            transform="translate(34.769 4.204)"
+                                            fill="#ff671d"
+                                        />
+                                        <path
+                                            d="M95.245,26.256,105.39,19.8l10.158-6.462a1.2,1.2,0,0,0-.088-2.073L104.86,5.7,94.256.138A1.2,1.2,0,0,0,92.5,1.249l.456,12.03.45,12.01a1.2,1.2,0,0,0,1.84.968"
+                                            transform="translate(40.571 0)"
+                                            fill="#ff671d"
+                                        />
+                                        <path
+                                            d="M125.97,12.176,110.1,20.545,94.231,28.913a1.2,1.2,0,0,0-.079,2.076l15.183,9.56L124.52,50.1a1.2,1.2,0,0,0,1.837-.967l.683-17.931.688-17.925a1.2,1.2,0,0,0-1.758-1.1"
+                                            transform="translate(41.052 5.279)"
+                                            fill="#ff671d"
+                                        />
+                                    </g>
+                                </g>
+                            </svg>
+                                                    </a>
+                        
+                        <button class="left-col-toggle">
+                            <svg class="icon-search" xmlns="http://www.w3.org/2000/svg" width="30.348" height="31.412" viewBox="0 0 30.348 31.412">
+                                <g id="search" transform="translate(-8.463 0.25)">
+                                    <g id="Group_222" data-name="Group 222" transform="translate(8.713 0)">
+                                        <path
+                                            id="Path_17903"
+                                            data-name="Path 17903"
+                                            d="M103.978,93a5.473,5.473,0,1,0-5.473,5.473A5.479,5.479,0,0,0,103.978,93Zm-5.473,3.662A3.662,3.662,0,1,1,102.167,93,3.666,3.666,0,0,1,98.506,96.657Z"
+                                            transform="translate(-87.883 -82.177)"
+                                            fill="#ff671d"
+                                            stroke="#ff671d"
+                                            stroke-width="0.5"
+                                        />
+                                        <path
+                                            id="Path_17904"
+                                            data-name="Path 17904"
+                                            d="M38.3,29.366l-4.4-4.4a6.6,6.6,0,0,0-4.579-10.541,12.1,12.1,0,0,0,.643-3.8,10.623,10.623,0,1,0-21.246,0v.04a11.785,11.785,0,0,0,1.629,5.975l8.138,13.821a.906.906,0,0,0,.777.446h0a.906.906,0,0,0,.777-.441l3.309-5.536a6.6,6.6,0,0,0,9.268,1.317l4.4,4.4a.905.905,0,1,0,1.28-1.28Zm-19.03-1.142L11.9,15.719a9.973,9.973,0,0,1-1.378-5.056v-.04a8.812,8.812,0,1,1,17.624,0,10.4,10.4,0,0,1-.8,3.892,6.6,6.6,0,0,0-4.983,8.522Zm6.1-3.746A4.785,4.785,0,0,1,28.475,16.2l.163,0a4.785,4.785,0,1,1-3.273,8.279Z"
+                                            transform="translate(-8.713 0)"
+                                            fill="#ff671d"
+                                            stroke="#ff671d"
+                                            stroke-width="0.5"
+                                        />
+                                    </g>
+                                </g>
+                            </svg>
+                            <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                                <path fill="#ff671d" d="M18 6L6 18M6 6l12 12" stroke="#ff671d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+
+                                            </div>
+                    <div class="map-view-breadcrumb">
+                        <ul>
+                            <li><a href="https://www.gdzelektrik.com.tr">Anasayfa</a></li>
+                            <li>Planlı Kesinti Haritası</li>
+                        </ul>
+                    </div>
+                    <h1 class="map-view-head">
+                        Planlı <br /> Kesinti Haritası
+                    </h1>
+                    <div class="map-view-filter desktopFilter">
+                        <div class="map-view-filter-button"></div>
+                        
+                        <div class="filter-select">
+                            <label for="district">İlçe</label>
+                            <select name="district" id="district" class="district">
+                                <option selected disabled>Lütfen ilçenizi seçiniz</option>
+                            </select>
+                        </div>
+                        <div class="filter-select">
+                            <label for="neighborhood">Mahalle</label>
+                            <select name="neighborhood" id="neighborhood" class="neighborhood">
+                                <option selected disabled>Lütfen mahallenizi seçiniz</option>
+                            </select>
+                        </div>
+                        <div class="filter-select">
+                            <label for="street">Sokak</label>
+                            <select name="street" id="street" class="street">
+                                <option selected disabled>Lütfen sokağınızı seçiniz</option>
+                            </select>
+                        </div>
+                        <div class="d-flex gap-1">
+                            <button class="map-view-filter-submit changeFilter w-100">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19.643" height="19.643" viewBox="0 0 19.643 19.643">
+                                    <g transform="translate(1.5 1.5)">
+                                        <path
+                                            d="M20.522,12.511A8.011,8.011,0,1,1,12.511,4.5a8.011,8.011,0,0,1,8.011,8.011Z"
+                                            transform="translate(-4.5 -4.5)"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="3"
+                                        />
+                                        <path d="M27.328,27.328l-2.353-2.353" transform="translate(-11.306 -11.306)" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+                                    </g>
+                                </svg>
+                                Sorgula
+                            </button>
+                            <button class="map-view-filter-submit bg-danger clearFilter d-none" style="width: 100px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="#fff">
+                                    <path
+                                        d="M135.2 17.7L128 32 32 32C14.3 32 0 46.3 0 64S14.3 96 32 96l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 0-7.2-14.3C307.4 6.8 296.3 0 284.2 0L163.8 0c-12.1 0-23.2 6.8-28.6 17.7zM416 128L32 128 53.2 467c1.6 25.3 22.6 45 47.9 45l245.8 0c25.3 0 46.3-19.7 47.9-45L416 128z"
+                                    />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-view-card-filter nav-filter desktopFilter">
+                    <button class="active" tab="1">Canlı Kesinti</button>
+                    <button tab="2">Planlanan</button>
+                </div>
+            </div>
+         
+            <div class="mobileSection">
+                <!-- <div class="map-view-card-filter nav-filter">
+                    <button class="active" tab="1">Canlı Kesinti</button>
+                    <button tab="2">Planlanan</button>
+                </div> -->
+                <div class="map-view-filter">
+                    <div class="map-view-filter-button"></div>
+                    
+                    <div class="filter-select">
+                        <label for="district">İlçe</label>
+                        <select name="district" id="district2" class="district">
+                            <option selected disabled>Lütfen ilçenizi seçiniz</option>
+                        </select>
+                    </div>
+                    <div class="filter-select">
+                        <label for="neighborhood">Mahalle</label>
+                        <select name="neighborhood" id="neighborhood2" class="neighborhood">
+                            <option selected disabled>Lütfen mahallenizi seçiniz</option>
+                        </select>
+                    </div>
+                    <div class="filter-select">
+                        <label for="street">Sokak</label>
+                        <select name="street" id="street3" class="street">
+                            <option selected disabled>Lütfen sokağınızı seçiniz</option>
+                        </select>
+                    </div>
+                    <div class="d-flex gap-1">
+                        <button class="map-view-filter-submit changeFilter w-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="19.643" height="19.643" viewBox="0 0 19.643 19.643">
+                                <g transform="translate(1.5 1.5)">
+                                    <path
+                                        d="M20.522,12.511A8.011,8.011,0,1,1,12.511,4.5a8.011,8.011,0,0,1,8.011,8.011Z"
+                                        transform="translate(-4.5 -4.5)"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="3"
+                                    />
+                                    <path d="M27.328,27.328l-2.353-2.353" transform="translate(-11.306 -11.306)" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+                                </g>
+                            </svg>
+                            Sorgula
+                        </button>
+                        <button class="map-view-filter-submit bg-danger clearFilter d-none" style="width: 100px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="#fff">
+                                <path
+                                    d="M135.2 17.7L128 32 32 32C14.3 32 0 46.3 0 64S14.3 96 32 96l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 0-7.2-14.3C307.4 6.8 296.3 0 284.2 0L163.8 0c-12.1 0-23.2 6.8-28.6 17.7zM416 128L32 128 53.2 467c1.6 25.3 22.6 45 47.9 45l245.8 0c25.3 0 46.3-19.7 47.9-45L416 128z"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="map-view ">
+                <div class="map-view-col right-col">
+                    <div class="map-view-map">
+                        <div class="map-view-map-info">
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+                                    <path
+                                        d="M14.063.563a13.5,13.5,0,1,0,13.5,13.5A13.5,13.5,0,0,0,14.063.563Zm0,5.988a2.286,2.286,0,1,1-2.286,2.286A2.286,2.286,0,0,1,14.063,6.55Zm3.048,13.827a.653.653,0,0,1-.653.653h-4.79a.653.653,0,0,1-.653-.653V19.071a.653.653,0,0,1,.653-.653h.653V14.933h-.653a.653.653,0,0,1-.653-.653V12.974a.653.653,0,0,1,.653-.653h3.484a.653.653,0,0,1,.653.653v5.444h.653a.653.653,0,0,1,.653.653Z"
+                                        transform="translate(-0.563 -0.563)"
+                                        fill="#4a4a4a"
+                                    />
+                                </svg>
+                                Planlı (bildir​​​imli) kesintiler; şirketimiz​​​in enerji dağıtım sektöründe faaliyet göstermiş olduğu il ve ilçelerde bakım, onarım ve yeni tesis çalışmaları gibi nedenlerle önceden planlanmış bir müdahale ile yapılan enerji kesintileridir. İlgili mevzuat gereği planlı kesintiler, başlangıç tarihinden 48 saat önce kurumsal web sitemiz, sosyal medya hesaplarımız, işitsel ve görsel medya gibi kitlesel iletişim araçlarımız yoluyla da duyurulmaktadır.
+                            </p>
+                            <a href="" alt="" class="notify d-none">
+                                Farklı bir sorun mu yaşıyorsunuz?
+                                <span>Arıza Bildir</span>
+                                <span class="badge">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="7.343" height="12.05" viewBox="0 0 7.343 12.05">
+                                        <path
+                                            d="M4.383,5.485.23,1.335A.781.781,0,0,1,.23.228a.791.791,0,0,1,1.111,0l4.7,4.7a.783.783,0,0,1,.023,1.081L1.344,10.745A.784.784,0,0,1,.234,9.638Z"
+                                            transform="translate(0.5 0.576)"
+                                            fill="#fff"
+                                            stroke="#fff"
+                                            stroke-width="1"
+                                        />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                        <div id="map" class="map-main"></div>
+                        <div class="map-control">
+                            <button class="zoomIn">+</button>
+                            <div class="rtl">
+                                <button class="darkMod">
+                                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor">
+                                        <path
+                                            d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
+                                        />
+                                    </svg>
+                                    <svg class="sun" fill="currentColor" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 207.628 207.628">
+                                        <circle cx="103.814" cy="103.814" r="45.868" />
+                                        <path
+                                            d="M103.814,157.183c-29.427,0-53.368-23.941-53.368-53.368s23.941-53.368,53.368-53.368s53.368,23.941,53.368,53.368 S133.241,157.183,103.814,157.183z M103.814,65.446c-21.156,0-38.368,17.212-38.368,38.368s17.212,38.368,38.368,38.368 s38.368-17.212,38.368-38.368S124.97,65.446,103.814,65.446z"
+                                        />
+                                        <path d="M103.814,39.385c-4.142,0-7.5-3.358-7.5-7.5V7.5c0-4.142,3.358-7.5,7.5-7.5s7.5,3.358,7.5,7.5v24.385 C111.314,36.027,107.956,39.385,103.814,39.385z" />
+                                        <path d="M103.814,207.628c-4.142,0-7.5-3.358-7.5-7.5v-24.385c0-4.142,3.358-7.5,7.5-7.5s7.5,3.358,7.5,7.5v24.385 C111.314,204.271,107.956,207.628,103.814,207.628z" />
+                                        <path d="M200.128,111.314h-24.385c-4.142,0-7.5-3.358-7.5-7.5s3.358-7.5,7.5-7.5h24.385c4.142,0,7.5,3.358,7.5,7.5 S204.271,111.314,200.128,111.314z" />
+                                        <path d="M31.885,111.314H7.5c-4.142,0-7.5-3.358-7.5-7.5s3.358-7.5,7.5-7.5h24.385c4.142,0,7.5,3.358,7.5,7.5 S36.027,111.314,31.885,111.314z" />
+                                        <path
+                                            d="M154.676,60.452c-1.919,0-3.839-0.732-5.303-2.197c-2.929-2.929-2.929-7.678,0-10.606l17.243-17.242 c2.929-2.929,7.678-2.93,10.606,0c2.929,2.929,2.929,7.678,0,10.606l-17.243,17.242C158.515,59.72,156.595,60.452,154.676,60.452z"
+                                        />
+                                        <path
+                                            d="M35.709,179.419c-1.919,0-3.839-0.732-5.303-2.197c-2.929-2.929-2.929-7.678,0-10.606l17.243-17.243 c2.929-2.929,7.678-2.929,10.606,0c2.929,2.929,2.929,7.678,0,10.606l-17.243,17.243C39.548,178.687,37.629,179.419,35.709,179.419z "
+                                        />
+                                        <path
+                                            d="M171.918,179.419c-1.919,0-3.839-0.732-5.303-2.197l-17.243-17.243c-2.929-2.929-2.929-7.678,0-10.606 c2.929-2.929,7.678-2.929,10.606,0l17.243,17.243c2.929,2.929,2.929,7.678,0,10.606 C175.757,178.687,173.838,179.419,171.918,179.419z"
+                                        />
+                                        <path
+                                            d="M52.952,60.452c-1.919,0-3.839-0.732-5.303-2.197L30.406,41.013c-2.929-2.929-2.929-7.677,0-10.606 c2.929-2.929,7.678-2.93,10.606,0l17.243,17.242c2.929,2.929,2.929,7.677,0,10.606C56.791,59.72,54.872,60.452,52.952,60.452z"
+                                        />
+                                    </svg>
+                                </button>
+                                <button class="zoomOut">-</button>
+                            </div>
+                        </div>
+                        <div class="map-list-detail">
+                            <p>Canlı Kesinti</p>
+                            <p>Planlanan Kesinti</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub-contact-menu">
+        <button class="sub-contact-menu-toggle"><svg xmlns="http://www.w3.org/2000/svg" width="10.13" height="17.719"
+                viewBox="0 0 10.13 17.719">
+                <path
+                    d="M14.3,15.051l6.7-6.7a1.266,1.266,0,0,0-1.793-1.788l-7.6,7.591a1.264,1.264,0,0,0-.037,1.746l7.627,7.643A1.266,1.266,0,0,0,21,21.755Z"
+                    transform="translate(-11.251 -6.194)" fill="#fab042" />
+            </svg></button>
+        <div class="sub-contact-menu-main">
+            <a href="Javascript:void(0)" class="main-show-button" alt=""><svg xmlns="http://www.w3.org/2000/svg"
+                    width="25.998" height="24.668" viewBox="0 0 25.998 24.668">
+                    <g transform="translate(0.15 1.065)" opacity="0.495">
+                        <path
+                            d="M362.671,1.838,360.106-.727a.641.641,0,0,0-.906,0h0l-7.695,7.7a.64.64,0,0,0-.188.453V9.986a.641.641,0,0,0,.641.641h2.565a.64.64,0,0,0,.453-.188l7.7-7.7a.641.641,0,0,0,0-.906Zm-8.414,7.507H352.6V7.687L359.653.633l1.658,1.658Zm0,0"
+                            transform="translate(-337.209 0)" fill="#fff" stroke="#fff" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="0.3" />
+                        <path
+                            d="M23.726,68.095a.641.641,0,0,0-.641.641v8.978a1.926,1.926,0,0,1-1.924,1.924H14.749a.638.638,0,0,0-.385.128l-4.1,3.078V80.279a.641.641,0,0,0-.641-.641H3.206a1.926,1.926,0,0,1-1.924-1.924V66.171a1.926,1.926,0,0,1,1.924-1.924H14.749a.641.641,0,1,0,0-1.282H3.206A3.209,3.209,0,0,0,0,66.171V77.714A3.21,3.21,0,0,0,3.206,80.92H8.978v3.206A.641.641,0,0,0,10,84.639l4.96-3.719h6.2a3.21,3.21,0,0,0,3.206-3.206V68.736A.641.641,0,0,0,23.726,68.095Zm0,0"
+                            transform="translate(0 -61.315)" fill="#fff" stroke="#fff" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="0.3" />
+                        <path d="M102.866,158.773H96.454a.641.641,0,1,0,0,1.282h6.412a.641.641,0,1,0,0-1.282Zm0,0"
+                            transform="translate(-91.965 -153.276)" fill="#fff" stroke="#fff" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="0.3" />
+                        <path d="M96.454,255.868h6.412a.641.641,0,1,0,0-1.283H96.454a.641.641,0,1,0,0,1.283Zm0,0"
+                            transform="translate(-91.965 -245.241)" fill="#fff" stroke="#fff" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="0.3" />
+                        <path d="M96.454,351.681h15.39a.641.641,0,0,0,0-1.282H96.454a.641.641,0,1,0,0,1.282Zm0,0"
+                            transform="translate(-91.965 -337.206)" fill="#fff" stroke="#fff" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="0.3" />
+                    </g>
+                </svg> Geri Bildirim</a>
+            <a href="/sikayet-ve-talep-bildirimi" alt=""><svg xmlns="http://www.w3.org/2000/svg" width="23.842"
+                    height="24.448" viewBox="0 0 23.842 24.448">
+                    <g transform="translate(-1.474 -1)">
+                        <path d="M8.521,12.535a.732.732,0,0,0,0,1.465h7.852a.732.732,0,0,0,0-1.465Z"
+                            transform="translate(-1.158 -2.13)" fill="#fff" stroke="#fff" stroke-width="0.2" />
+                        <path d="M12.052,17.644H8.521a.732.732,0,0,0,0,1.465h3.531a.732.732,0,1,0,0-1.465Z"
+                            transform="translate(-1.158 -3.082)" fill="#fff" stroke="#fff" stroke-width="0.2" />
+                        <path
+                            d="M10.786,23.883H5.212A2.179,2.179,0,0,1,3.039,21.7V6.869A2.179,2.179,0,0,1,5.212,4.688H6.725v.184A1.939,1.939,0,0,0,8.662,6.809h7A1.939,1.939,0,0,0,17.6,4.872V4.688H19.1a2.153,2.153,0,0,1,2.172,2.181v4.174a.732.732,0,1,0,1.465,0V6.869A3.645,3.645,0,0,0,19.1,3.224H17.6V3.037A1.939,1.939,0,0,0,15.659,1.1h-7A1.939,1.939,0,0,0,6.724,3.037v.187H5.212A3.646,3.646,0,0,0,1.574,6.869V21.7a3.646,3.646,0,0,0,3.638,3.645h5.574a.732.732,0,0,0,0-1.465ZM8.19,3.037a.472.472,0,0,1,.472-.472h7a.472.472,0,0,1,.472.472V4.871a.472.472,0,0,1-.472.472h-7a.472.472,0,0,1-.472-.472Z"
+                            transform="translate(0 0)" fill="#fff" stroke="#fff" stroke-width="0.2" />
+                        <path
+                            d="M26.947,17.186a2.719,2.719,0,0,0-3.756,0L16.7,23.678a1.413,1.413,0,0,0-.4.766l-.356,2.107a1.419,1.419,0,0,0,1.634,1.633l2.106-.356a1.413,1.413,0,0,0,.766-.4l6.492-6.492a2.659,2.659,0,0,0,0-3.755Zm-7.5,9.2-2.051.409.343-2.081,4.653-4.653,1.685,1.685ZM25.91,19.9l-.8.8-1.684-1.684.8-.8A1.19,1.19,0,0,1,25.91,19.9Z"
+                            transform="translate(-2.674 -2.857)" fill="#fff" stroke="#fff" stroke-width="0.2" />
+                    </g>
+                </svg> Şikayet Talep Başvuru</a>
+        </div>
+    </div>
+    <div class="satis-faction  ">
+        <div class="satis-faction-main">
+            
+            <button class="btnCloseMain">
+                <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                    viewBox="0 0 24 24">
+                    <path fill="#ff671d" d="M18 6L6 18M6 6l12 12" stroke="#ff671d" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+
+            </button>
+            <span class="satis-faction-pagi">1/4</span>
+            <h3 class="satis-faction-title">
+                Web sitemizi genel olarak nasıl değerlendirirsiniz?
+            </h3>
+            <form action="https://www.gdzelektrik.com.tr/ajax/satisfaction" method="POST" enctype="multipart/form-data"
+                id="satisfactionForm">
+                <input type="hidden" name="_token" value="VhZAiqjvPng0F7qgDFGIIyiuh2SHZgsBOEXguuKp">                <div class="satis-faction-scoring user-action" step="1">
+                    <div class="satis-faction-scoring-item">
+                        <label for="overall_evaluation_one" class="scoring-face">
+                            <input class="d-none" id="overall_evaluation_one" type="radio" value="1"
+                                name="overall_evaluation">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="54.455" height="36"
+                                viewBox="0 0 54.455 36">
+                                <defs>
+                                    <clipPath>
+                                        <rect width="54.455" height="36" fill="none" />
+                                    </clipPath>
+                                </defs>
+                                <g transform="translate(0 0)">
+                                    <g transform="translate(0 0)" clip-path="url(#clip-path)">
+                                        <path
+                                            d="M14.53,8.959a1.415,1.415,0,0,0,.04-2.55L2.048.149A1.415,1.415,0,0,0,.782,2.68l9.89,4.944L.823,12.171a1.415,1.415,0,0,0,.594,2.7l.591-.131Z"
+                                            transform="translate(0 0)" />
+                                        <path
+                                            d="M90.229,7.7A1.413,1.413,0,0,0,91.05,8.96l5.455,2.518,7.068,3.262.591.131a1.415,1.415,0,0,0,.594-2.7l-6.52-3.01-3.33-1.537,6.064-3.032L104.8,2.681A1.415,1.415,0,0,0,103.533.15l-.656.328L91.01,6.411A1.413,1.413,0,0,0,90.229,7.7"
+                                            transform="translate(-51.125 -0.001)" />
+                                        <path
+                                            d="M19.367,55.22a12.067,12.067,0,0,0-1.315,5.423,1.415,1.415,0,0,0,2.83,0,9.638,9.638,0,0,1,1.841-5.583c2.615-3.711,7.749-6.241,13.645-6.241a19.71,19.71,0,0,1,5.228.708c5.971,1.642,10.259,6,10.259,11.116a1.415,1.415,0,0,0,2.831,0c0-5.668-4.052-10.585-9.953-13.022a21.937,21.937,0,0,0-8.365-1.633c-7.7,0-14.3,3.83-17,9.231"
+                                            transform="translate(-10.229 -26.058)" />
+                                    </g>
+                                </g>
+                            </svg>
+                        </label>
+                        <p>Çok Kötü</p>
+                    </div>
+                    <div class="satis-faction-scoring-item">
+                        <label for="overall_evaluation_two" class="scoring-face">
+                            <input class="d-none" id="overall_evaluation_two" type="radio" value="2"
+                                name="overall_evaluation">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="44.728" height="36"
+                                viewBox="0 0 44.728 36">
+                                <defs>
+                                    <clipPath>
+                                        <rect width="44.728" height="36" fill="none" />
+                                    </clipPath>
+                                </defs>
+                                <g transform="translate(0 0)">
+                                    <g transform="translate(0 0)" clip-path="url(#clip-path)">
+                                        <path
+                                            d="M6.228,59.452A1.473,1.473,0,0,0,7.7,57.979,9.715,9.715,0,0,1,8.74,53.671c2.294-4.665,8.179-8,15.081-8a20.307,20.307,0,0,1,6.513,1.058c5.651,1.915,9.607,6.232,9.607,11.249a1.473,1.473,0,0,0,2.946,0c0-5.652-3.872-10.585-9.6-13.22a22.657,22.657,0,0,0-9.47-2.034c-8.715,0-16.067,4.71-18.332,11.11a12.371,12.371,0,0,0-.734,4.144,1.473,1.473,0,0,0,1.473,1.473"
+                                            transform="translate(-2.61 -23.451)" />
+                                        <path
+                                            d="M4.042,11.593c2.232,0,4.042-2.595,4.042-5.8S6.274,0,4.042,0,0,2.6,0,5.8s1.81,5.8,4.042,5.8"
+                                            transform="translate(0 0)" />
+                                        <path
+                                            d="M89.315,5.8c0-.121-.019-.234-.025-.353C89.161,2.41,87.422,0,85.273,0c-2.232,0-4.041,2.6-4.041,5.8,0,3.186,1.793,5.767,4.01,5.792.011,0,.02,0,.031,0,2.232,0,4.042-2.6,4.042-5.8"
+                                            transform="translate(-44.588 0)" />
+                                    </g>
+                                </g>
+                            </svg>
+                        </label>
+                        <p>Kötü</p>
+                    </div>
+                    <div class="satis-faction-scoring-item">
+                        <label for="overall_evaluation_three" class="scoring-face">
+                            <input class="d-none" id="overall_evaluation_three" type="radio" value="3"
+                                name="overall_evaluation">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="45.883" height="25.667"
+                                viewBox="0 0 45.883 25.667">
+                                <defs>
+                                    <clipPath>
+                                        <rect width="45.883" height="25.667" fill="none" />
+                                    </clipPath>
+                                </defs>
+                                <g transform="translate(0 0)">
+                                    <g transform="translate(0 0)" clip-path="url(#clip-path)">
+                                        <path
+                                            d="M7.259,11.456c2.206,0,3.994-2.565,3.994-5.728S9.465,0,7.259,0,3.265,2.565,3.265,5.728s1.788,5.728,3.994,5.728"
+                                            transform="translate(-1.81 0)" />
+                                        <path
+                                            d="M88.49,0C86.284,0,84.5,2.565,84.5,5.728c0,3.052,1.669,5.523,3.767,5.695.077.006.149.033.227.033,2.206,0,3.994-2.565,3.994-5.728,0-.16-.024-.31-.033-.467C92.283,2.32,90.584,0,88.49,0"
+                                            transform="translate(-46.83 0)" />
+                                        <path
+                                            d="M0,52.5a1.456,1.456,0,0,0,1.455,1.455H44.427a1.456,1.456,0,0,0,0-2.911H1.455A1.456,1.456,0,0,0,0,52.5"
+                                            transform="translate(0 -28.291)" />
+                                    </g>
+                                </g>
+                            </svg>
+                        </label>
+                        <p>Orta</p>
+                    </div>
+                    <div class="satis-faction-scoring-item">
+                        <label id="overall_evaluation_four" class="scoring-face">
+                            <input class="d-none" id="overall_evaluation_four" type="radio" value="4"
+                                name="overall_evaluation">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="35.551"
+                                viewBox="0 0 50 35.551">
+                                <defs>
+                                    <clipPath>
+                                        <rect width="50" height="35.551" fill="none" />
+                                    </clipPath>
+                                </defs>
+                                <g transform="translate(0 0)">
+                                    <g transform="translate(0 0)" clip-path="url(#clip-path)">
+                                        <path
+                                            d="M19.453,50.057A1.333,1.333,0,0,0,18.12,51.39a11.443,11.443,0,0,0,1.555,5.692c2.716,4.772,8.72,8.1,15.689,8.1,9.508,0,17.244-6.19,17.244-13.8a1.332,1.332,0,1,0-2.665,0c0,6.138-6.539,11.131-14.579,11.131-5.4,0-10.109-2.257-12.629-5.594a9.141,9.141,0,0,1-1.95-5.537,1.333,1.333,0,0,0-1.332-1.333"
+                                            transform="translate(-10.727 -29.634)" />
+                                        <path
+                                            d="M16.237,9.171a1.332,1.332,0,0,0,2.665,0A9.326,9.326,0,0,0,9.451,0,9.326,9.326,0,0,0,0,9.171a1.332,1.332,0,0,0,2.665,0A6.657,6.657,0,0,1,9.451,2.665a6.657,6.657,0,0,1,6.786,6.506"
+                                            transform="translate(0 0)" />
+                                        <path
+                                            d="M85.67,0a9.326,9.326,0,0,0-9.451,9.171,1.333,1.333,0,0,0,2.665,0A6.657,6.657,0,0,1,85.67,2.665a6.853,6.853,0,0,1,5.681,2.966,6.267,6.267,0,0,1,1.107,3.54,1.332,1.332,0,0,0,2.665,0,8.95,8.95,0,0,0-2.444-6.1A9.518,9.518,0,0,0,85.67,0"
+                                            transform="translate(-45.122 0)" />
+                                    </g>
+                                </g>
+                            </svg>
+                        </label>
+                        <p>İyi</p>
+                    </div>
+                    <div class="satis-faction-scoring-item active">
+                        <label id="overall_evaluation_five" class="scoring-face">
+                            <input class="d-none" id="overall_evaluation_five" type="radio" value="5"
+                                name="overall_evaluation" checked>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="52.893" height="45.059" viewBox="0 0 52.893 45.059">
+                                <defs>
+                                    <clipPath id="clip-path">
+                                        <rect id="Rectangle_4808" data-name="Rectangle 4808" width="52.893"
+                                            height="45.059" fill="#fff" />
+                                    </clipPath>
+                                </defs>
+                                <g transform="translate(0 0)">
+                                    <g transform="translate(0 0)" clip-path="url(#clip-path)">
+                                        <path
+                                            d="M11.754,5.877a5.877,5.877,0,1,0-5.877,5.877,5.877,5.877,0,0,0,5.877-5.877"
+                                            transform="translate(0 0)" />
+                                        <path
+                                            d="M80.645,11.754a5.877,5.877,0,1,0-5.877-5.877,5.877,5.877,0,0,0,5.877,5.877"
+                                            transform="translate(-33.629 0)" />
+                                        <path
+                                            d="M8.042,15.5a20.283,20.283,0,0,1-4.906-5.268A19.32,19.32,0,0,1,0,0H41.987a19.53,19.53,0,0,1-8.042,15.5,21.451,21.451,0,0,1-12.951,4.3A21.451,21.451,0,0,1,8.042,15.5Z"
+                                            transform="translate(5.197 25.263)" stroke="rgba(0,0,0,0)"
+                                            stroke-width="1" />
+                                    </g>
+                                </g>
+                            </svg>
+                        </label>
+                        <p>Çok İyi</p>
+                    </div>
+                </div>
+                <div class="satis-faction-scoring user-action d-none" step="2">
+                    <div class="satis-faction-scoring-item">
+                        <label for="looking_information_one" class="scoring-face">
+                            <input class="d-none" id="looking_information_one" type="radio" value="1"
+                                name="looking_information">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="44.728" height="36"
+                                viewBox="0 0 44.728 36">
+                                <defs>
+                                    <clipPath>
+                                        <rect width="44.728" height="36" fill="none" />
+                                    </clipPath>
+                                </defs>
+                                <g transform="translate(0 0)">
+                                    <g transform="translate(0 0)" clip-path="url(#clip-path)">
+                                        <path
+                                            d="M6.228,59.452A1.473,1.473,0,0,0,7.7,57.979,9.715,9.715,0,0,1,8.74,53.671c2.294-4.665,8.179-8,15.081-8a20.307,20.307,0,0,1,6.513,1.058c5.651,1.915,9.607,6.232,9.607,11.249a1.473,1.473,0,0,0,2.946,0c0-5.652-3.872-10.585-9.6-13.22a22.657,22.657,0,0,0-9.47-2.034c-8.715,0-16.067,4.71-18.332,11.11a12.371,12.371,0,0,0-.734,4.144,1.473,1.473,0,0,0,1.473,1.473"
+                                            transform="translate(-2.61 -23.451)" />
+                                        <path
+                                            d="M4.042,11.593c2.232,0,4.042-2.595,4.042-5.8S6.274,0,4.042,0,0,2.6,0,5.8s1.81,5.8,4.042,5.8"
+                                            transform="translate(0 0)" />
+                                        <path
+                                            d="M89.315,5.8c0-.121-.019-.234-.025-.353C89.161,2.41,87.422,0,85.273,0c-2.232,0-4.041,2.6-4.041,5.8,0,3.186,1.793,5.767,4.01,5.792.011,0,.02,0,.031,0,2.232,0,4.042-2.6,4.042-5.8"
+                                            transform="translate(-44.588 0)" />
+                                    </g>
+                                </g>
+                            </svg>
+                        </label>
+                        <p>Hayır</p>
+                    </div>
+                    <div class="satis-faction-scoring-item active">
+                        <label for="looking_information_two" class="scoring-face">
+                            <input class="d-none" id="looking_information_two" type="radio" value="2"
+                                name="looking_information" checked>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="35.551"
+                                viewBox="0 0 50 35.551">
+                                <defs>
+                                    <clipPath id="clip-path">
+                                        <rect width="50" height="35.551" fill="#fff" />
+                                    </clipPath>
+                                </defs>
+                                <g transform="translate(0 0)">
+                                    <g transform="translate(0 0)" clip-path="url(#clip-path)">
+                                        <path
+                                            d="M19.453,50.057A1.333,1.333,0,0,0,18.12,51.39a11.443,11.443,0,0,0,1.555,5.692c2.716,4.772,8.72,8.1,15.689,8.1,9.508,0,17.244-6.19,17.244-13.8a1.332,1.332,0,1,0-2.665,0c0,6.138-6.539,11.131-14.579,11.131-5.4,0-10.109-2.257-12.629-5.594a9.141,9.141,0,0,1-1.95-5.537,1.333,1.333,0,0,0-1.332-1.333"
+                                            transform="translate(-10.727 -29.634)" />
+                                        <path
+                                            d="M16.237,9.171a1.332,1.332,0,0,0,2.665,0A9.326,9.326,0,0,0,9.451,0,9.326,9.326,0,0,0,0,9.171a1.332,1.332,0,0,0,2.665,0A6.657,6.657,0,0,1,9.451,2.665a6.657,6.657,0,0,1,6.786,6.506"
+                                            transform="translate(0 0)" />
+                                        <path
+                                            d="M85.67,0a9.326,9.326,0,0,0-9.451,9.171,1.333,1.333,0,0,0,2.665,0A6.657,6.657,0,0,1,85.67,2.665a6.853,6.853,0,0,1,5.681,2.966,6.267,6.267,0,0,1,1.107,3.54,1.332,1.332,0,0,0,2.665,0,8.95,8.95,0,0,0-2.444-6.1A9.518,9.518,0,0,0,85.67,0"
+                                            transform="translate(-45.122 0)" />
+                                    </g>
+                                </g>
+                            </svg>
+                        </label>
+                        <p>Evet</p>
+                    </div>
+                </div>
+                <div class="satis-faction-scoring user-action d-none" step="3">
+                    <div class="check-area">
+                        <div class="form-checks">
+                            <input name="using_form[]" class="form-checks-input" type="checkbox"
+                                value="Online İşlemler" id="online_islemler">
+                            <label class="form-checks-label" for="online_islemler">Online İşlemler</label>
+                        </div>
+                        <div class="form-checks">
+                            <input name="using_form[]" class="form-checks-input" type="checkbox"
+                                value="Planlı Kesintiler" id="planli_kesintiler">
+                            <label class="form-checks-label" for="planli_kesintiler">Planlı Kesintiler</label>
+                        </div>
+                        <div class="form-checks">
+                            <input name="using_form[]" class="form-checks-input" type="checkbox"
+                                value="Yasal Bildirimler" id="yasal_bildirimler">
+                            <label class="form-checks-label" for="yasal_bildirimler">Yasal Bildirimler</label>
+                        </div>
+                                                    <div class="form-checks">
+                                <input name="using_form[]" class="form-checks-input" type="checkbox"
+                                    value="Yatırımcı İlişkileri" id="yatirimci_iliskiler">
+                                <label class="form-checks-label" for="yatirimci_iliskiler">Yatırımcı
+                                    İlişkileri</label>
+                            </div>
+                                                <div class="form-checks">
+                            <input name="using_form[]" class="form-checks-input" type="checkbox" value="Duyurular"
+                                id="duyurular">
+                            <label class="form-checks-label" for="duyurular">Duyurular</label>
+                        </div>
+                        <div class="form-checks">
+                            <input name="using_form[]" class="form-checks-input" type="checkbox"
+                                value="Kurumsal sosyal sorumluluk projeleri" id="kurumsal">
+                            <label class="form-checks-label" for="kurumsal">Kurumsal sosyal sorumluluk
+                                projeleri</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="satis-faction-scoring user-action d-none comment" step="4">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-floating w-100">
+                                <textarea name="faction_comment" class="form-control" id="faction-comment"></textarea>
+                                <label for="faction-comment">Açıklama giriniz</label>
+                                <p class="word-count">0/500</p>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mb-lg-0 mb-3 mt-3">
+                                <div class="g-recaptcha" data-sitekey="6LcrxFMeAAAAAN_4I-Z-AD_RfdBjgoj6WPdjg9E7">
+                                </div>
+                                <script src='https://www.google.com/recaptcha/api.js'></script>
+
+                            </div>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <p>Buraya web sitesi kullanımı ve içindeki bilgiler ile ilgili düşüncelerinizi
+                                yazabilirsiniz.
+                                Aldığınız hizmetlerle ilgili sorularınız için <a href="/online-islemler"
+                                    style="text-decoration: unset; color: #FF6C24">Online işlemler</a> merkezimizi
+                                kullanabilirsiniz.</p>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="satis-faction-progress-bar" step="1"></div>
+                <div class="satis-faction-button-group">
+                    <a href="javascript:void(0);" class="satis-faction-prev-button d-none"><span><svg
+                                xmlns="http://www.w3.org/2000/svg" width="7.343" height="12.05"
+                                viewBox="0 0 7.343 12.05">
+                                <path
+                                    d="M4.383,5.485.23,1.335A.781.781,0,0,1,.23.228a.791.791,0,0,1,1.111,0l4.7,4.7a.783.783,0,0,1,.023,1.081L1.344,10.745A.784.784,0,0,1,.234,9.638Z"
+                                    transform="translate(0.5 0.576)" fill="#fff" stroke="#fff"
+                                    stroke-width="1" />
+                            </svg></span> Geri</a>
+                    <a href="javascript:void(0);" class="satis-faction-next-button next text-white">İleri <span><svg
+                                xmlns="http://www.w3.org/2000/svg" width="7.343" height="12.05"
+                                viewBox="0 0 7.343 12.05">
+                                <path
+                                    d="M4.383,5.485.23,1.335A.781.781,0,0,1,.23.228a.791.791,0,0,1,1.111,0l4.7,4.7a.783.783,0,0,1,.023,1.081L1.344,10.745A.784.784,0,0,1,.234,9.638Z"
+                                    transform="translate(0.5 0.576)" fill="#fff" stroke="#fff"
+                                    stroke-width="1" />
+                            </svg></span></a>
+                    <button type="submit" class="satis-faction-next-button submit">Gönder <span><svg
+                                xmlns="http://www.w3.org/2000/svg" width="17.811" height="17.811"
+                                viewBox="0 0 17.811 17.811">
+                                <g transform="translate(-2.25 -1.939)">
+                                    <path d="M25.3,3l-8.8,8.8" transform="translate(-6.3)" fill="none"
+                                        stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="1.5" />
+                                    <path d="M19,3,13.4,19l-3.2-7.2L3,8.6Z" fill="none" stroke="#fff"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                                </g>
+                            </svg></span></button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+
+
+            let pagi = 1;
+            const head = [
+                'Web sitemizi genel olarak nasıl değerlendirirsiniz?',
+                'Aradığınız bilgiye<br>ulaşabildiniz mi?',
+                'Web sitemizi hangi<br>işlemler için kullandınız?',
+                '<p>Web sitemizi geliştirebilmemiz için görüş ve önerilerinizi bizimle paylaşabilir misiniz? <small>(İsteğe bağlı)</small></p>'
+            ]
+
+            const progress = (operator) => {
+                if ((pagi + 1) == 4) {
+                    if ($('input[name="using_form[]"]:checked').length == 0) {
+                        return {
+                            'message': 'Lütfen en az bir adet seçim yapınız.'
+                        };
+                    }
+                }
+                if (operator == '+') {
+                    pagi++;
+                } else if (operator == '-') {
+                    pagi--;
+                } else {
+                    pagi = 1;
+                }
+                $('.satis-faction-pagi').text(pagi + '/4')
+                $('.satis-faction-title').html(head[pagi - 1])
+                $('.satis-faction-progress-bar').attr('step', pagi)
+
+                $('.user-action').each(function(index) {
+                    if ($(this).attr('step') == pagi) {
+                        $(this).removeClass('d-none')
+                    } else {
+                        $(this).addClass('d-none')
+                    }
+                })
+
+                if (pagi > 1) {
+                    $('.satis-faction-prev-button').removeClass('d-none')
+                } else {
+                    $('.satis-faction-prev-button').addClass('d-none')
+                }
+                if (pagi == 4) {
+                    $('.satis-faction-next-button.submit').removeClass('d-none')
+                    $('.satis-faction-next-button.next').addClass('d-none')
+                } else {
+                    $('.satis-faction-next-button.submit').addClass('d-none')
+                    $('.satis-faction-next-button.next').removeClass('d-none')
+                }
+            }
+
+            $('.main-show-button').on('click', function() {
+                $('.satis-faction').toggleClass('active')
+            })
+
+            $('.satis-faction-scoring-item').on('click', function() {
+                $('.satis-faction-scoring-item').each(function(index) {
+                    $(this).removeClass('active')
+                })
+                $(this).addClass('active')
+            })
+
+
+
+            $('.btnCloseMain').on('click', function() {
+                $('.satis-faction').removeClass('active');
+            });
+
+
+            $('.satis-faction-next-button').on('click', function() {
+                $('.satis-faction-alert').remove();
+                if (pagi < 4) {
+                    var resp = progress('+');
+                    if (resp != undefined && resp['message'] != undefined) {
+                        $('.satis-faction-alert').remove();
+                        $('<div class="alert alert-info satis-faction-alert mb-0" role="alert">' +
+                            '<p>' + resp['message'] + '</p>' +
+                            '</div>').insertAfter('.satis-faction-title');
+                    }
+                }
+            })
+
+            $('.satis-faction-prev-button').on('click', function() {
+                if (pagi > 0) {
+                    progress('-')
+                }
+            })
+
+            $('#faction-comment').on('keyup', function() {
+                $('.word-count').text($('#faction-comment').val().length + '/500')
+                if ($('#faction-comment').val().length > 500) {
+                    $('#faction-comment').val($('#faction-comment').val().slice(0, 499))
+                }
+            })
+
+            progress()
+
+            // Form submit işlemi
+            $('#satisfactionForm').on('submit', function(e) {
+                e.preventDefault();
+
+                var submitButton = $(this).find('button[type="submit"]');
+                submitButton.prop('disabled', true);
+
+                var formData = new FormData(this);
+                var recaptchaResponse = grecaptcha.getResponse();
+
+                if (!recaptchaResponse) {
+                    alert('Lütfen reCAPTCHA doğrulamasını yapın.');
+                    submitButton.prop('disabled', false);
+                    return;
+                }
+
+                formData.append('g-recaptcha-response', recaptchaResponse);
+
+                $.ajax({
+                    url: $(this).attr('action'),
+                    type: 'POST',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function(response) {
+                        if (response.success) {
+                            $.fancybox.open(
+                                "<div class='alert alert-success'> <i class='icon-check succes-icon'></i> " +
+                                response.message + "</div>"
+                            );
+                            $('#satisfactionForm')[0].reset();
+                            $('.satis-faction').removeClass('active');
+                            // 5 dakika boyunca butonu devre dışı bırak
+                            setTimeout(function() {
+                                submitButton.prop('disabled', false);
+                            }, 300000); // 5 dakika = 300000 ms
+                        } else {
+                            $.fancybox.open(
+                                "<div class='alert alert-warning'> <i class='icon-close succes-icon'></i> " +
+                                response.message + "</div>"
+                            );
+                            submitButton.prop('disabled', false);
+                        }
+                    },
+                    error: function(xhr) {
+                        if (xhr.status === 429) {
+                            $.fancybox.open(
+                                "<div class='alert alert-warning'> <i class='icon-close succes-icon'></i> Lütfen 5 dakika bekleyiniz. Bu süre içinde tekrar form gönderemezsiniz.</div>"
+                            );
+                            // 5 dakika boyunca butonu devre dışı bırak
+                            setTimeout(function() {
+                                submitButton.prop('disabled', false);
+                            }, 300000); // 5 dakika = 300000 ms
+                        } else if (xhr.status === 422) {
+                            $.fancybox.open(
+                                "<div class='alert alert-warning'> <i class='icon-close succes-icon'></i> " +
+                                xhr.responseJSON.message + "</div>"
+                            );
+                            submitButton.prop('disabled', false);
+                        } else {
+                            $.fancybox.open(
+                                "<div class='alert alert-warning'> <i class='icon-close succes-icon'></i> Bir hata oluştu. Lütfen tekrar deneyiniz.</div>"
+                            );
+                            submitButton.prop('disabled', false);
+                        }
+                    }
+                });
+            });
+        })
+
+        $('.sub-contact-menu-toggle').on('click', function() {
+            $('.sub-contact-menu').toggleClass('active')
+        })
+    </script>
+    <link rel="stylesheet" href="/assets/css/fancybox.min.css">
+    <style>
+        .fancybox-content {
+            background: white !important;
+        }
+
+        .btnCloseMain {
+            position: absolute;
+            right: 10px;
+            top: 20px;
+            background: transparent;
+            border: none;
+        }
+    </style>
+     
+            <script>
+
+                $(document).ready(function () {
+                   if (window.innerWidth < 991) {
+                        $('.left-col-toggle').addClass('active');
+                        $('.map-view-col.left-col').addClass('show');
+                        $('.mobileSection').addClass('d-block');
+                    }
+                });
+
+                $(function () {
+                    let mapMain = $(".map-view-map .map-main");
+                    mapMain.css("height", "100vh");
+
+                    $(".left-col-toggle").on("click", function () {
+                        $(this).toggleClass("active");
+                        $(".map-view-col.left-col").toggleClass("show");
+                        $(".mobileSection").toggleClass("d-block");
+
+                        // Get the current height of the map in pixels
+                        let currentHeight = mapMain.height();
+                        let windowHeight = $(window).height(); // Get the height of the viewport
+
+                        // Check if the current height matches the window's inner height (100vh)
+                        if (currentHeight === windowHeight) {
+                            mapMain.css("height", "100%"); 
+                        } else {
+                            mapMain.css("height", "100vh");
+                        }
+                    });
+                });
+
+
+
+
+                                let setCookie = (e, t, o) => {
+                                    let i = new Date;
+                                    i.setTime(i.getTime() + 6e4 * o);
+                                    let l = "expires=" + i.toUTCString();
+                                    document.cookie = e + "=" + t + ";" + l + ";path=/"
+                                };
+                                let getCookie = e => {
+                                    let t = e + "=",
+                                        r = decodeURIComponent(document.cookie),
+                                        l = r.split(";");
+                                    for (let o = 0; o < l.length; o++) {
+                                        let i = l[o];
+                                        for (;
+                                            " " == i.charAt(0);) i = i.substring(1);
+                                        if (0 == i.indexOf(t)) return i.substring(t.length, i.length)
+                                    }
+                                    return ""
+                                };
+
+                                const lightTheme = [{
+                                        "featureType": "water",
+                                        "elementType": "geometry",
+                                        "stylers": [{
+                                                "color": "#e9e9e9"
+                                            },
+                                            {
+                                                "lightness": 17
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "featureType": "landscape",
+                                        "elementType": "geometry",
+                                        "stylers": [{
+                                                "color": "#f5f5f5"
+                                            },
+                                            {
+                                                "lightness": 20
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "featureType": "road.highway",
+                                        "elementType": "geometry.fill",
+                                        "stylers": [{
+                                                "color": "#ffffff"
+                                            },
+                                            {
+                                                "lightness": 17
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "featureType": "road.highway",
+                                        "elementType": "geometry.stroke",
+                                        "stylers": [{
+                                                "color": "#ffffff"
+                                            },
+                                            {
+                                                "lightness": 29
+                                            },
+                                            {
+                                                "weight": 0.2
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "featureType": "road.arterial",
+                                        "elementType": "geometry",
+                                        "stylers": [{
+                                                "color": "#ffffff"
+                                            },
+                                            {
+                                                "lightness": 18
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "featureType": "road.local",
+                                        "elementType": "geometry",
+                                        "stylers": [{
+                                                "color": "#ffffff"
+                                            },
+                                            {
+                                                "lightness": 16
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "featureType": "poi",
+                                        "elementType": "geometry",
+                                        "stylers": [{
+                                                "color": "#f5f5f5"
+                                            },
+                                            {
+                                                "lightness": 21
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "featureType": "poi.park",
+                                        "elementType": "geometry",
+                                        "stylers": [{
+                                                "color": "#dedede"
+                                            },
+                                            {
+                                                "lightness": 21
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "elementType": "labels.text.stroke",
+                                        "stylers": [{
+                                                "visibility": "on"
+                                            },
+                                            {
+                                                "color": "#ffffff"
+                                            },
+                                            {
+                                                "lightness": 16
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "elementType": "labels.text.fill",
+                                        "stylers": [{
+                                                "saturation": 36
+                                            },
+                                            {
+                                                "color": "#333333"
+                                            },
+                                            {
+                                                "lightness": 40
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "elementType": "labels.icon",
+                                        "stylers": [{
+                                            "visibility": "off"
+                                        }]
+                                    },
+                                    {
+                                        "featureType": "transit",
+                                        "elementType": "geometry",
+                                        "stylers": [{
+                                                "color": "#f2f2f2"
+                                            },
+                                            {
+                                                "lightness": 19
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "featureType": "administrative",
+                                        "elementType": "geometry.fill",
+                                        "stylers": [{
+                                                "color": "#fefefe"
+                                            },
+                                            {
+                                                "lightness": 20
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "featureType": "administrative",
+                                        "elementType": "geometry.stroke",
+                                        "stylers": [{
+                                                "color": "#fefefe"
+                                            },
+                                            {
+                                                "lightness": 17
+                                            },
+                                            {
+                                                "weight": 1.2
+                                            }
+                                        ]
+                                    }
+                                ];
+                                const darkTheme = [{
+                                        "featureType": "all",
+                                        "elementType": "labels.text.fill",
+                                        "stylers": [{
+                                                "saturation": 36
+                                            },
+                                            {
+                                                "color": "#000000"
+                                            },
+                                            {
+                                                "lightness": 40
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "featureType": "all",
+                                        "elementType": "labels.text.stroke",
+                                        "stylers": [{
+                                                "visibility": "on"
+                                            },
+                                            {
+                                                "color": "#000000"
+                                            },
+                                            {
+                                                "lightness": 16
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "featureType": "all",
+                                        "elementType": "labels.icon",
+                                        "stylers": [{
+                                            "visibility": "off"
+                                        }]
+                                    },
+                                    {
+                                        "featureType": "administrative",
+                                        "elementType": "geometry.fill",
+                                        "stylers": [{
+                                                "color": "#000000"
+                                            },
+                                            {
+                                                "lightness": 20
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "featureType": "administrative",
+                                        "elementType": "geometry.stroke",
+                                        "stylers": [{
+                                                "color": "#000000"
+                                            },
+                                            {
+                                                "lightness": 17
+                                            },
+                                            {
+                                                "weight": 1.2
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "featureType": "landscape",
+                                        "elementType": "geometry",
+                                        "stylers": [{
+                                                "color": "#000000"
+                                            },
+                                            {
+                                                "lightness": 20
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "featureType": "poi",
+                                        "elementType": "geometry",
+                                        "stylers": [{
+                                                "color": "#000000"
+                                            },
+                                            {
+                                                "lightness": 21
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "featureType": "road.highway",
+                                        "elementType": "geometry.fill",
+                                        "stylers": [{
+                                                "color": "#000000"
+                                            },
+                                            {
+                                                "lightness": 17
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "featureType": "road.highway",
+                                        "elementType": "geometry.stroke",
+                                        "stylers": [{
+                                                "color": "#000000"
+                                            },
+                                            {
+                                                "lightness": 29
+                                            },
+                                            {
+                                                "weight": 0.2
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "featureType": "road.arterial",
+                                        "elementType": "geometry",
+                                        "stylers": [{
+                                                "color": "#000000"
+                                            },
+                                            {
+                                                "lightness": 18
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "featureType": "road.local",
+                                        "elementType": "geometry",
+                                        "stylers": [{
+                                                "color": "#000000"
+                                            },
+                                            {
+                                                "lightness": 16
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "featureType": "transit",
+                                        "elementType": "geometry",
+                                        "stylers": [{
+                                                "color": "#000000"
+                                            },
+                                            {
+                                                "lightness": 19
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "featureType": "water",
+                                        "elementType": "geometry",
+                                        "stylers": [{
+                                                "color": "#000000"
+                                            },
+                                            {
+                                                "lightness": 17
+                                            }
+                                        ]
+                                    }
+                                ]
+                                let themes = []
+                                if (getCookie("mapDark") == 1) {
+                                    themes = [...darkTheme]
+                                }else{
+                                    themes = [...lightTheme]
+                                }
+                                let zoom = 8.7;
+                                let map = null;
+
+                                let mapdata = []
+
+                                let plandata = []
+
+                                function CreateMap(theme = getCookie("mapDark"), locations =
+                                                                            [38.5046283, 27.2008438]
+                                     ) {
+
+                                    map = null
+                                    document.getElementById("map").innerHTML = '';
+
+                                     map = new ymaps.Map("map", {
+                                        center: locations,
+                                        zoom: zoom,
+                                        controls: []
+                                    });
+
+                                    $('.zoomIn').on('click', function() {
+                                        var zoomLevel = map.getZoom();
+                                        map.setZoom(zoomLevel + 1);
+                                    });
+
+                                    $('.zoomOut').on('click', function() {
+                                        var zoomLevel = map.getZoom();
+                                        map.setZoom(zoomLevel - 1);
+                                    });
+
+                                    if (plandata.length) {
+                                        for (let i = 0; i < plandata.length; i++) {
+                                            const placemark = new ymaps.Placemark([plandata[i].coordinates.lat, plandata[i].coordinates.lng], {}, {
+                                                preset: 'islands#circleIcon',
+                                                iconColor : '#727272',
+                                            });
+                                            map.geoObjects.add(placemark);
+                                        }
+                                    }
+                                    if (mapdata.length) {
+                                        for (let i = 0; i < mapdata.length; i++) {
+                                            if (mapdata[i] && mapdata[i].coordinates) {
+                                                const placemark = new ymaps.Placemark([mapdata[i].coordinates.lat, mapdata[i].coordinates.lng], {}, {
+                                                    preset: 'islands#circleIcon',
+                                                    iconColor : '#EA652E',
+                                                });
+                                                map.geoObjects.add(placemark);
+                                            }
+                                        }
+                                    }
+                                }
+
+
+                                const activeLanguage = document.documentElement.lang;
+                                let currentCity;
+                                $.getJSON(
+                                    window.location.protocol +
+                                    "//" +
+                                    window.location.host +
+                                    "/assets/js/data/GDZ/cities.json",
+                                    function(data) {
+                                        var cityIterator = 0;
+                                        $.each(data, function(key, value) {
+                                            if ($(".map-view-filter-button").length > 0) {
+                                                $(".map-view-filter-button").append(
+                                                    '<button ' + (cityIterator == 0 ? 'class="active"' : "") + ' data-city="' +
+                                                    value.ID + '">' + value.ADI + '</button>');
+                                            }
+
+                                            if (cityIterator == 0) {
+                                                var CSRF_TOKEN = $('meta[name="csrf-token"]').attr(
+                                                    "content"
+                                                );
+                                                $.ajax({
+                                                    url: `/ajax/getDistricts`,
+                                                    data: {
+                                                        _token: CSRF_TOKEN,
+                                                        city: value.ID,
+                                                        lang: activeLanguage,
+                                                    },
+                                                    type: "post",
+                                                    success: function(response) {
+                                                        if (response.success) {
+                                                            $(".district").html(response.html);
+                                                        }
+                                                    },
+                                                });
+                                                currentCity = value.ID;
+                                            }
+
+                                            cityIterator++;
+                                        });
+                                    });
+
+                                $('body').on('click', '.map-view-filter-button button', function() {
+                                    mapdata = []
+                                    plandata = []
+                                    if ($(this).attr('data-city') == 20) {
+                                        CreateMap(getCookie("mapDark"), [37.7827427378311, 29.096306791631015])
+                                    } else if ($(this).attr('data-city') == 9) {
+                                        CreateMap(getCookie("mapDark"), [37.837714804391524, 27.845366846672817])
+                                    } else if ($(this).attr('data-city') == 48) {
+                                        CreateMap(getCookie("mapDark"), [37.215261658920085, 28.364150757263165])
+                                    } else if ($(this).attr('data-city') == 35) {
+                                        CreateMap(getCookie("mapDark"))
+                                    } else if ($(this).attr('data-city') == 45) {
+                                        CreateMap(getCookie("mapDark"), [38.614132698262125, 27.430767847018537])
+                                    }
+                                });
+                                $(window).on('load', function() {
+                                    $('.map-view-filter-button button.active').trigger('click')
+                                });
+            </script>
+
+            <script>
+                $(".darkMod").on("click", function () {
+                    if ($("body").hasClass("dark")) {
+                        setCookie("mapDark", 0, -60000);
+                        $("body").removeClass("dark");
+                        mod = false;
+                        themes = [...lightTheme];
+                        CreateMap(getCookie("mapDark"));
+                    } else {
+                        setCookie("mapDark", 1, 60000);
+                        $("body").addClass("dark");
+                        mod = true;
+                        themes = [...darkTheme];
+                        CreateMap(getCookie("mapDark"));
+                    }
+                });
+
+                $(document).on("click", ".map-view-filter-button button", function () {
+                    $(".map-view-filter-button button").each(function (index) {
+                        $(this).removeClass("active");
+                        $(".clearFilter").addClass("d-none");
+                    });
+                    $(this).addClass("active");
+                    var CSRF_TOKEN = $('meta[name="csrf-token"]').attr("content");
+                    $.ajax({
+                        url: `/ajax/getDistricts`,
+                        data: {
+                            _token: CSRF_TOKEN,
+                            city: $(this).data("city"),
+                            lang: activeLanguage,
+                        },
+                        type: "post",
+                        success: function (response) {
+                            if (response.success) {
+                                $(".district").html(response.html);
+                            }
+                        },
+                    });
+                    $.ajax({
+                        url: `/ajax/getNeighborhoods`,
+                        data: {
+                            _token: CSRF_TOKEN,
+                            district: $(this).val(),
+                            lang: activeLanguage,
+                        },
+                        type: "post",
+                        success: function (response) {
+                            if (response.success) {
+                                $(".neighborhood").html(response.html);
+                            }
+                        },
+                    });
+                    $.ajax({
+                        url: `/ajax/getStreets`,
+                        data: {
+                            _token: CSRF_TOKEN,
+                            neighborhood: $(this).val(),
+                            lang: activeLanguage,
+                        },
+                        type: "post",
+                        success: function (response) {
+                            if (response.success) {
+                                $(".street").html(response.html);
+                            }
+                        },
+                    });
+                });
+
+                $(document).on("change", ".district", function () {
+                    var CSRF_TOKEN = $('meta[name="csrf-token"]').attr("content");
+                    $(".clearFilter").removeClass("d-none");
+                    $.ajax({
+                        url: `/ajax/getNeighborhoods`,
+                        data: {
+                            _token: CSRF_TOKEN,
+                            district: $(this).val(),
+                            lang: activeLanguage,
+                        },
+                        type: "post",
+                        success: function (response) {
+                            if (response.success) {
+                                $(".neighborhood").html(response.html);
+                            }
+                        },
+                    });
+                });
+
+                $(document).on("change", ".neighborhood", function () {
+                    var CSRF_TOKEN = $('meta[name="csrf-token"]').attr("content");
+                    $(".clearFilter").removeClass("d-none");
+                    $.ajax({
+                        url: `/ajax/getStreets`,
+                        data: {
+                            _token: CSRF_TOKEN,
+                            neighborhood: $(this).val(),
+                            lang: activeLanguage,
+                        },
+                        type: "post",
+                        success: function (response) {
+                            if (response.success) {
+                                $(".street").html(response.html);
+                            }
+                        },
+                    });
+                });
+
+                $(document).ready(function () {
+                    $(".clearFilter").on("click", function () {
+                        var CSRF_TOKEN = $('meta[name="csrf-token"]').attr("content");
+                        $.ajax({
+                            url: `/ajax/getDistricts`,
+                            data: {
+                                _token: CSRF_TOKEN,
+                                city: $(".map-view-filter-button button.active").data("city"),
+                                lang: activeLanguage,
+                            },
+                            type: "post",
+                            success: function (response) {
+                                if (response.success) {
+                                    $(".district").html(response.html);
+                                }
+                            },
+                        });
+
+                        $.ajax({
+                            url: `/ajax/getNeighborhoods`,
+                            data: {
+                                _token: CSRF_TOKEN,
+                                district: $(this).val(),
+                                lang: activeLanguage,
+                            },
+                            type: "post",
+                            success: function (response) {
+                                if (response.success) {
+                                    $(".neighborhood").html(response.html);
+                                }
+                            },
+                        });
+
+                        $.ajax({
+                            url: `/ajax/getStreets`,
+                            data: {
+                                _token: CSRF_TOKEN,
+                                neighborhood: $(this).val(),
+                                lang: activeLanguage,
+                            },
+                            type: "post",
+                            success: function (response) {
+                                if (response.success) {
+                                    $(".street").html(response.html);
+                                }
+                            },
+                        });
+
+                        $(this).addClass("d-none");
+                    });
+                    CreateMap(getCookie("mapDark"));
+                });
+
+                String.prototype.turkishToUpper = function () {
+                    var string = this ?? "-";
+                    var letters = {
+                        i: "İ",
+                        ş: "Ş",
+                        ğ: "Ğ",
+                        ü: "Ü",
+                        ö: "Ö",
+                        ç: "Ç",
+                        ı: "I",
+                    };
+                    string = string.replace(/(([iışğüçö]))/g, function (letter) {
+                        return letters[letter];
+                    });
+                    return string.toUpperCase();
+                };
+
+                var groupBy = function (xs, key) {
+                    return xs.reduce(function (rv, x) {
+                        (rv[x[key]] = rv[x[key]] || []).push(x);
+                        return rv;
+                    }, {});
+                };
+
+                let formatDays = ["Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar"];
+                let formatMonths = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"];
+                const keyFormat = "YYYY-MM-DD";
+                const groupByDate = (data) => {
+                    let grouped = {};
+                    data.forEach((item) => {
+                        let date = moment(item.Planlanan_Baslangic_Zamani, keyFormat).format(keyFormat);
+                        if (!grouped[date]) {
+                            grouped[date] = [];
+                        }
+                        grouped[date].push(item);
+                    });
+                    return grouped;
+                };
+
+                function submit() {
+                    Swal.fire({
+                        showConfirmButton: false,
+                        didOpen: () => {
+                            Swal.showLoading();
+                        },
+                    });
+                    let currentPage = 2;
+                    var city = $(".map-view-filter-button button.active").text()?.turkishToUpper();
+                    const district_option = $("#district option:selected").text()?.turkishToUpper();
+                    const neighborhood_option = $("#neighborhood option:selected").text()?.turkishToUpper();
+                    const street_option = $("#street option:selected").text()?.turkishToUpper();
+                    let address = city;
+                    $.getJSON(
+                        window.location.protocol + "//" + window.location.host + "/outages_data3/" + city + "/" + district_option.trim() + "/" + neighborhood_option.trim() + "/" + street_option.trim() + "?page=" + currentPage,
+                        function (data) {
+                            if (data.last_page > 1) {
+                                paginate = true;
+                            }
+                            if (paginate) {
+                                lastPage = data.last_page;
+                                currentPage = data.current_page;
+                            }
+                            data = data.data;
+                            if ($("#district").val() != null) {
+                                address += " " + $("#district option:selected").text().turkishToUpper();
+                            }
+
+                            if ($("#neighborhood").val() != null) {
+                                address += " " + $("#neighborhood option:selected").text().turkishToUpper();
+                            }
+
+                            if ($("#street").val() != null) {
+                                address += " " + $("#street option:selected").text().turkishToUpper();
+                            }
+                            if (data["Başladı"].length !== 0) {
+                                let coordinates = data["Başladı"][0].CBS_Koordinat;
+                                coordinates = coordinates.split("(");
+                                coordinates = coordinates[1].split(")");
+                                coordinates = coordinates[0].split(" ");
+                                // map.setCenter([coordinates[1], coordinates[0]]);
+                            }
+                            var dil = $("html").attr("lang");
+                            if ($(".map-view-col.center-col").length == 0) {
+                                $('<div class="map-view-col center-col"></div>').insertAfter(".map-view-col.left-col");
+                            }
+                            var groupedCoordinates1 = groupBy(data["Başladı"], "CBS_Koordinat");
+                            var groupedCoordinates2 = groupBy(data["Planlandı"], "CBS_Koordinat");
+                            $(".map-view-col.center-col").html(
+                                '<div class="map-view-card-filter">' +
+                                    '<button class="active" tab="1">Canlı Kesinti (' +
+                                    Object.keys(groupedCoordinates1).length +
+                                    ")</button>" +
+                                    '<button tab="2">Planlanan (' +
+                                    Object.keys(groupedCoordinates2).length +
+                                    ")</button>" +
+                                    "</div>" +
+                                    '<div class="map-view-card-main">' +
+                                    '<div class="card-list scroll-main main-list-1">' +
+                                    (Object.keys(groupedCoordinates1).length > 0
+                                        ? '<h3 class="map-view-card-main-detail"><b> ' + address + " ’de</b> şu an <b>" + Object.keys(groupedCoordinates1).length + " adet</b> elektrik kesintisi bulunmaktadır.</h3>"
+                                        : '<h3 class="map-view-card-main-detail"><b> ' + address + " ’de</b> şu an elektrik kesintisi bulunmamaktadır.</h3>") +
+                                    "</div>" +
+                                    '<div class="card-list scroll-main main-list-2 d-none">' +
+                                    (Object.keys(groupedCoordinates2).length > 0
+                                        ? '<h3 class="map-view-card-main-detail"><b> ' + address + " ’de</b> <b>" + Object.keys(groupedCoordinates2).length + " adet</b> elektrik kesintisi planlanmaktadır.</h3>"
+                                        : '<h3 class="map-view-card-main-detail"><b> ' + address + " ’de</b> elektrik kesintisi planlanmamaktadır.</h3>") +
+                                    "</div>" +
+                                    "</div>"
+                            );
+                            let dateGrouped1 = groupByDate(data["Başladı"]);
+                            let dateGrouped2 = groupByDate(data["Planlandı"]);
+                            var html1 = "";
+                            $.each(dateGrouped1, function (key, data) {
+                                let groupedByIDValues = groupBy(data, "Kesinti_ID");
+                                let gun = null;
+                                let date = new Date(key);
+                                if (date.getDay() - 1 == -1) {
+                                    gun = formatDays[date.getDay() + 6];
+                                } else {
+                                    gun = formatDays[date.getDay() - 1];
+                                }
+                                $.each(groupedByIDValues, function (indeks, deger) {
+                                    let mahalle = "";
+                                    let sokakArray = [];
+                                    let sokak = "";
+                                    let startHour = "";
+                                    let endHour = "";
+                                    let startDate = "";
+                                    let durum = "";
+                                    let reason = "Şebeke Yenileme ve Bakım Çalışmaları";
+                                    let kesintiID = "";
+
+                                    let sehir = deger[0].Sehir;
+                                    let ilce = deger[0].Ilce;
+                                    let adres = new Map();
+
+                                    $.each(deger, function (index, value) {
+                                        ilce = value.Ilce;
+                                        durum = value.Durum;
+                                        kesintiID = value.Kesinti_ID;
+
+                                        if (!kesintiID.includes(value.Kesinti_ID)) {
+                                            if (kesintiID.length > 0) {
+                                                mahalle += ", ";
+                                            }
+                                            kesintiID += value.Kesinti_ID;
+                                        }
+                                        if (!mahalle.includes(value.Mahalle) && value.Mahalle != null && value.Mahalle != "" && value.Mahalle != undefined) {
+                                            if (mahalle.length > 0) {
+                                                mahalle += ", " + value.Mahalle;
+                                            } else {
+                                                mahalle += value.Mahalle;
+                                            }
+                                        }
+
+                                        if (value.Sokak !== null) {
+                                            if (!sokakArray.includes(value.Sokak) && value.Sokak !== null && value.Sokak !== "" && value.Sokak !== undefined) {
+                                                if (!value.Sokak.includes("İSİMSİZ") && !value.Sokak.includes("İsimsiz")) {
+                                                    sokakArray.push(value.Sokak);
+                                                    if (sokak.length > 0) {
+                                                        sokak += ", " + value.Sokak;
+                                                    } else {
+                                                        sokak += " " + value.Sokak;
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        adres.set(value.Mahalle, adres.get(value.Mahalle) + sokak);
+                                        sokak = "";
+
+                                        var start = moment(value.Planlanan_Baslangic_Zamani).utcOffset("+0300");
+                                        startDate = "<span>" + start.format("DD") + "</span>" + formatMonths[start.month()] + " " + start.format("YYYY");
+                                        startHour = start.format("HH:mm");
+
+                                        var end = moment(value.Planlanan_Sona_Erme_Zamani).utcOffset("+0300");
+                                        endDate = end.format("DD.MM.YYYY");
+                                        endHour = end.format("HH:mm");
+                                    });
+
+                                    html1 +=
+                                        '<div class="card">' +
+                                        '<div class="card-body">' +
+                                        '<div class="outage-detail">' +
+                                        '<p class="info purple">' +
+                                        durum +
+                                        "</p>" +
+                                        '<p class="date">' +
+                                        startDate +
+                                        "</p>" +
+                                        '<p class="detail">' +
+                                        reason +
+                                        "</p>" +
+                                        '<p class="time">' +
+                                        startHour +
+                                        " - " +
+                                        endHour +
+                                        "</p>" +
+                                        "</div>" +
+                                        '<div class="outage-street">' +
+                                        '<p class="interrup"><b>Kesinti ID</b> : ' +
+                                        kesintiID +
+                                        "</p>" +
+                                        "<h5>" +
+                                        ilce +
+                                        " / " +
+                                        sehir +
+                                        "</h5>";
+                                    for (let [key, value] of adres) {
+                                        html1 += "<p>" + key;
+                                        if (value !== "undefined") {
+                                            html1 += " ( " + value.replace("undefined", "") + " )";
+                                        }
+                                        html1 += "</p>";
+                                    }
+                                    html1 +=
+                                        "</div>" +
+                                        "</div>" +
+                                        '<div class="card-footer">' +
+                                        '<div class="outage-status">' +
+                                        '<svg xmlns="http://www.w3.org/2000/svg" width="38.653" height="38.653" viewBox="0 0 38.653 38.653"><defs><clipPath id="clip-path34"><path d="M0-682.665H38.653v38.653H0Z" transform="translate(0 682.665)" fill="none" /></clipPath></defs><g transform="translate(0 682.665)"><g transform="translate(0 -682.665)"><g clip-path="url(#clip-path34)"><g transform="translate(33.521 20.861)"><path d="M-66.629,0l-2,2.264-2-2.264" transform="translate(70.628)" fill="none" stroke="#ffc21e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /></g><g transform="translate(6.17 3.144)"><path d="M0-112.457a16.173,16.173,0,0,1,13.157-6.75,16.194,16.194,0,0,1,16.194,16.194v3.786" transform="translate(0 119.206)" fill="none" stroke="#ffc21e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /></g><g transform="translate(1.132 15.548)"><path d="M0-37.715l2-2.264,2,2.264" transform="translate(0 39.979)" fill="none" stroke="#ffc21e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /></g><g transform="translate(3.132 15.548)"><path d="M-489.03-220.448a16.174,16.174,0,0,1-13.157,6.75,16.194,16.194,0,0,1-16.194-16.194v-3.786" transform="translate(518.381 233.679)" fill="none" stroke="#ffc21e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /></g><g transform="translate(15.929 15.937)"><path d="M-113.205-56.6a3.4,3.4,0,0,1-3.4,3.4,3.4,3.4,0,0,1-3.4-3.4,3.4,3.4,0,0,1,3.4-3.4A3.4,3.4,0,0,1-113.205-56.6Z" transform="translate(120 60)" fill="none" stroke="#ffc21e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /></g><g transform="translate(9.251 9)"><path d="M-299.947-172.185a7.946,7.946,0,0,0-.216-1.844l2.365-1.365-2.265-3.923-2.37,1.368a7.917,7.917,0,0,0-3.176-1.834v-2.736h-4.53v2.736a7.917,7.917,0,0,0-3.176,1.834l-2.37-1.368-2.265,3.923,2.365,1.365a7.948,7.948,0,0,0-.216,1.844,7.954,7.954,0,0,0,.213,1.831l-2.362,1.363,2.265,3.923,2.36-1.362a7.92,7.92,0,0,0,3.186,1.843v2.721h4.53v-2.721a7.92,7.92,0,0,0,3.186-1.843l2.36,1.362,2.265-3.923-2.362-1.363A7.945,7.945,0,0,0-299.947-172.185Z" transform="translate(317.95 182.52)" fill="none" stroke="#ffc21e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /></g></g></g></g></svg>' +
+                                        "<p>Çalışmalar Devam Ediyor…</p>" +
+                                        "</div>" +
+                                        "</div>" +
+                                        "</div>";
+                                });
+                            });
+                            $(".main-list-1").append(html1);
+                            var html2 = "";
+                            $.each(dateGrouped2, function (key, data) {
+                                let groupedByIDValues = groupBy(data, "Kesinti_ID");
+                                let gun = null;
+                                let date = new Date(key);
+                                if (date.getDay() - 1 == -1) {
+                                    gun = formatDays[date.getDay() + 6];
+                                } else {
+                                    gun = formatDays[date.getDay() - 1];
+                                }
+                                $.each(groupedByIDValues, function (indeks, deger) {
+                                    let mahalle = "";
+                                    let sokakArray = [];
+                                    let sokak = "";
+                                    let startHour = "";
+                                    let endHour = "";
+                                    let startDate = "";
+                                    let durum = "";
+                                    let reason = "Şebeke Yenileme ve Bakım Çalışmaları";
+                                    let kesintiID = "";
+
+                                    let sehir = deger[0].Sehir;
+                                    let ilce = deger[0].Ilce;
+                                    let adres = new Map();
+
+                                    $.each(deger, function (index, value) {
+                                        ilce = value.Ilce;
+                                        durum = value.Durum;
+                                        kesintiID = value.Kesinti_ID;
+
+                                        if (!kesintiID.includes(value.Kesinti_ID)) {
+                                            if (kesintiID.length > 0) {
+                                                mahalle += ", ";
+                                            }
+                                            kesintiID += value.Kesinti_ID;
+                                        }
+                                        if (!mahalle.includes(value.Mahalle) && value.Mahalle != null && value.Mahalle != "" && value.Mahalle != undefined) {
+                                            if (mahalle.length > 0) {
+                                                mahalle += ", " + value.Mahalle;
+                                            } else {
+                                                mahalle += value.Mahalle;
+                                            }
+                                        }
+
+                                        if (value.Sokak !== null) {
+                                            if (!sokakArray.includes(value.Sokak) && value.Sokak !== null && value.Sokak !== "" && value.Sokak !== undefined) {
+                                                if (!value.Sokak.includes("İSİMSİZ") && !value.Sokak.includes("İsimsiz")) {
+                                                    sokakArray.push(value.Sokak);
+                                                    if (sokak.length > 0) {
+                                                        sokak += ", " + value.Sokak;
+                                                    } else {
+                                                        sokak += " " + value.Sokak;
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        adres.set(value.Mahalle, adres.get(value.Mahalle) + sokak);
+                                        sokak = "";
+
+                                        var start = moment(value.Planlanan_Baslangic_Zamani).utcOffset("+0300");
+                                        startDate = "<span>" + start.format("DD") + "</span>" + formatMonths[start.month()] + " " + start.format("YYYY");
+                                        startHour = start.format("HH:mm");
+
+                                        var end = moment(value.Planlanan_Sona_Erme_Zamani).utcOffset("+0300");
+                                        endDate = end.format("DD.MM.YYYY");
+                                        endHour = end.format("HH:mm");
+                                    });
+
+                                    html2 +=
+                                        '<div class="card">' +
+                                        '<div class="card-body">' +
+                                        '<div class="outage-detail">' +
+                                        '<p class="info purple">' +
+                                        durum +
+                                        "</p>" +
+                                        '<p class="date">' +
+                                        startDate +
+                                        "</p>" +
+                                        '<p class="detail">' +
+                                        reason +
+                                        "</p>" +
+                                        '<p class="time">' +
+                                        startHour +
+                                        " - " +
+                                        endHour +
+                                        "</p>" +
+                                        "</div>" +
+                                        '<div class="outage-street">' +
+                                        '<p class="interrup"><b>Kesinti ID</b> : ' +
+                                        kesintiID +
+                                        "</p>" +
+                                        "<h5>" +
+                                        ilce +
+                                        " / " +
+                                        sehir +
+                                        "</h5>";
+                                    for (let [key, value] of adres) {
+                                        html2 += "<p>" + key;
+                                        if (value !== "undefined") {
+                                            html2 += " ( " + value.replace("undefined", "") + " )";
+                                        }
+                                        html2 += "</p>";
+                                    }
+                                    html2 += "</div>" + "</div>" + "</div>";
+                                });
+                            });
+                            $(".main-list-2").append(html2);
+
+                            plandata = [];
+                            mapdata = [];
+
+                            $.each(groupedCoordinates1, function (key, value) {
+                                let coordinates = value[0].CBS_Koordinat;
+                                coordinates = coordinates.split("(");
+                                coordinates = coordinates[1].split(")");
+                                coordinates = coordinates[0].split(" ");
+
+                                mapdata.push({
+                                    coordinates: {
+                                        lat: parseFloat(coordinates[1]),
+                                        lng: parseFloat(coordinates[0]),
+                                    },
+                                });
+                            });
+
+                            $.each(groupedCoordinates2, function (key, value) {
+                                let coordinates = value[0].CBS_Koordinat;
+                                coordinates = coordinates.split("(");
+                                coordinates = coordinates[1].split(")");
+                                coordinates = coordinates[0].split(" ");
+
+                                plandata.push({
+                                    coordinates: {
+                                        lat: parseFloat(coordinates[1]),
+                                        lng: parseFloat(coordinates[0]),
+                                    },
+                                });
+                            });
+
+                            if (Object.keys(groupedCoordinates1).length > 0) {
+                                // let ps = mapdata[0].coordinates
+                                // const map = new google.maps.Map(document.getElementById("map"),  {
+                                //     zoom,
+                                //     center: mapdata[0].coordinates,
+                                //     mapId: "map",
+                                // });
+                                CreateMap(getCookie("mapDark"), [mapdata[0].coordinates.lat, mapdata[0].coordinates.lng]);
+                            } else {
+                                CreateMap(getCookie("mapDark"));
+                            }
+                            Swal.close();
+                        }
+                    );
+                }
+
+                $(".changeFilter").on("click", function (e) {
+                    e.preventDefault();
+                    submit();
+                });
+
+                $(document).on("click", ".map-view-card-filter button", function () {
+                    $(".map-view-card-filter button").each(function (index) {
+                        $(this).removeClass("active");
+                        $(".card-list.scroll-main").addClass("d-none");
+                    });
+                    $(".main-list-" + $(this).attr("tab")).removeClass("d-none");
+                    $(this).addClass("active");
+                });
+                 $(document).ready(function() {
+                    $(document).on('change', '.district, .neighborhood, .street', function(){
+                        submit();
+                    })
+
+                    const select1 = document.getElementById('district');
+                    const select2 = document.getElementById('district2');
+
+                    const select3 = document.getElementById('neighborhood');
+                    const select4 = document.getElementById('neighborhood2');
+
+                    const select5 = document.getElementById('street');
+                    const select6 = document.getElementById('street3');
+
+                    function syncSelect(changedSelect, targetSelect) {
+                        changedSelect.addEventListener('change', function() {
+                        targetSelect.value = changedSelect.value;
+                        });
+                    }
+
+                    syncSelect(select1, select2);
+                    syncSelect(select2, select1);
+
+                    syncSelect(select3, select4);
+                    syncSelect(select4, select3);
+
+                    syncSelect(select5, select6);
+                    syncSelect(select6, select5);
+
+            });
+
+
+            </script>
+        </div>
+    </body>
+</html>

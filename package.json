@@ -1,0 +1,20 @@
+{
+  "name": "izmir-outage-bot",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Telegram channel bot for IZSU water outage alerts with dedupe.",
+  "main": "bot.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^9.4.0",
+    "cheerio": "^1.0.0-rc.12",
+    "dotenv": "^16.4.5",
+    "telegraf": "^4.16.3",
+    "undici": "^6.19.7"
+  }
+}
